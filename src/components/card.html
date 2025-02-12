@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div
+        class="relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6"
+      >
+        <div class="p-2">
+          <img
+            class="w-full rounded-xl"
+            src="../images/blog-3.png"
+            alt="Card Image"
+          />
+          <div class="flex-2 right-10 top-[40px] absolute">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+        <div class="py-4">
+          <h2 class="text-3xl text-gray-800 text-center">Sofa Coach</h2>
+          <div class="flex">
+            <p
+              class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
+            >
+              $ 550
+            </p>
+            <p class="text-red-500 p-4 flex-2 text-3xl">$ 440</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
