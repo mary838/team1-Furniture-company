@@ -1,6 +1,12 @@
-const menuBtn = document.getElementById("menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
 
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
+  const hiddenElements = document.querySelectorAll(".scroll-slide");
+  hiddenElements.forEach((el) => observer.observe(el));
 });
