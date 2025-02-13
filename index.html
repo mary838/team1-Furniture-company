@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Letter Animation with Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .animate-bounce {
+        animation: bounce 0.5s infinite;
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <h1 class="text-5xl font-bold">
+      <span class="inline-block animate-bounce delay-[0.1s]">H</span>
+      <span class="inline-block animate-bounce delay-[0.2s]">e</span>
+      <span class="inline-block animate-bounce delay-[0.3s]">l</span>
+      <span class="inline-block animate-bounce delay-[0.4s]">l</span>
+      <span class="inline-block animate-bounce delay-[0.5s]">o</span>
+    </h1>
+  </body>
+</html>
