@@ -15,7 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-
+    <script src="../scripts/menu.js"></script>
     <style>
       body {
         font-family: "Poppins", sans-serif;
@@ -110,12 +110,43 @@
         <li><a href="#" class="block py-2">About</a></li>
         <li><a href="#" class="block py-2">Product</a></li>
         <li><a href="#" class="block py-2">Pages</a></li>
-        <li><a href="#" class="block py-2">Category</a></li>
+        <li class="relative group">
+          <button class="hover:text-blue-900">Category</button>
+          <ul
+            class="absolute left-0 mt-2 w-40 bg-white shadow-md rounded-lg hidden group-hover:block"
+          >
+            <li>
+              <a href="#" class="block px-4 py-2 hover:text-blue-900 text-black"
+                >Table</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:text-blue-900 text-black"
+                >Sofa</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:text-blue-900 text-black"
+                >Mirror</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:text-blue-900 text-black"
+                >Lamp</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:text-blue-900 text-black"
+                >Bed</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li></li>
         <li><a href="#" class="block py-2">Blog</a></li>
         <li><a href="#" class="block py-2">Contact</a></li>
       </ul>
     </nav>
-
-    <script src="../scripts/about.js"></script>
   </body>
 </html>
