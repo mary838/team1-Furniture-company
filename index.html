@@ -22,6 +22,24 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- appcss -->
     <link rel="stylesheet" href="../styles/style.css" />
+    <style>
+      .mega-menu-container {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+
+      .mega-menu-container.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    </style>
   </head>
   <body class="overflow-x-hidden">
     <!-- header -->
@@ -79,12 +97,37 @@
             </ul>
           </li>
           <li>
-            <a href="#" class="text-amber-900 hover:text-blue-900">Blog</a>
+            <a href="#" class="text-ambe gh r-900 hover:text-blue-900">Blog</a>
           </li>
           <li>
             <a href="#" class="text-amber-900 hover:text-blue-900">Contact</a>
           </li>
+
+          <!-- icon -->
+          <li>
+            <a href="#" id="search-icon">
+              <i
+                class="fa-solid fa-magnifying-glass text-amber-900 hover:text-blue-900 transition-colors duration-300"
+              ></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" id="userIcon">
+              <i
+                class="fa-regular fa-user text-amber-900 hover:text-blue-900 transition-colors duration-300"
+              ></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-amber-900 hover:text-blue-900 transition-colors duration-300"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
         </ul>
+
         <!-- Navigation -->
 
         <ul class="flex items-center border gap-[1.4em]">
@@ -111,6 +154,7 @@
             </a>
           </li>
         </ul>
+
 
         <!-- Search Modal -->
         <div id="searchOverlay" class="fixed inset-0 z-50 hidden">
@@ -466,7 +510,10 @@
 
         <!-- Table -->
         <div
-          data-aos="fade-up"
+          data-aos="fade-up"<<<<<<< neath-add-header-file-html
+131
+ 
+=======
           data-aos-delay="200"
           class="bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
         >
@@ -1034,7 +1081,7 @@
             ©2025 UrbanWood Designs. All rights reserved.
           </p>
 
-          <div class="flex space-x-6">
+          <div class="flex gap-[1.4em]">
             <a href="#" class="text-gray-600 hover:text-gray-900">
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path
