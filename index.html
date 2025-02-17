@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home page</title>
+    <title>UrbanWood Designs</title>
     <!-- Add Font Awesome -->
     <link
       rel="stylesheet"
@@ -13,7 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <!-- output -->
-    <link rel="stylesheet" href="../styles/output.css" />
+    <link rel="stylesheet" href="./src/styles/output.css" />
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom animation CSS -->
@@ -32,15 +32,21 @@
     <nav class="z-auto bg-white-600 p-0">
       <div class="px-6 mx-auto flex justify-between items-center bg-gray-200">
         <a href="#" class="text-white text-2xl font-bold">
-          <img src="../images/logo" alt="Logo" class="h-[50px]" />
+          <img src="../images/Logo.png" alt="Logo" class="h-[50px]" />
         </a>
 
         <ul class="hidden md:flex space-x-6">
           <li>
-            <a href="#" class="text-amber-900 hover:text-blue-900">Home</a>
+            <a href="./index.html" class="text-amber-900 hover:text-blue-900"
+              >Home</a
+            >
           </li>
           <li>
-            <a href="#" class="text-amber-900 hover:text-blue-900">About</a>
+            <a
+              href="./src/pages/about.html"
+              class="text-amber-900 hover:text-blue-900"
+              >About</a
+            >
           </li>
           <li>
             <a href="#" class="text-amber-900 hover:text-blue-900">Product</a>
@@ -80,24 +86,31 @@
           <li>
             <a href="#" class="text-amber-900 hover:text-blue-900">Contact</a>
           </li>
+        </ul>
+        <!-- Navigation -->
+
+        <ul class="flex items-center border gap-[1.4em]">
           <li>
             <a href="#" id="search-icon">
               <i
-                class="fa-solid fa-magnifying-glass text-amber-900 hover:text-blue-900"
+                class="fa-solid fa-magnifying-glass text-amber-900 hover:text-blue-900 transition-colors duration-300"
               ></i>
             </a>
           </li>
-          <li>
-            <a href="#"
-              ><i
-                class="fa-regular fa-user text-amber-900 hover:text-blue-900"
+          <l>
+            <a href="#" id="userIcon">
+              <i
+                class="fa-regular fa-user text-amber-900 hover:text-blue-900 transition-colors duration-300"
               ></i>
             </a>
-          </li>
+          </l>
           <li>
-            <a href="#" class="text-amber-900">
+            <a
+              href="#"
+              class="text-amber-900 hover:text-blue-900 transition-colors duration-300"
+            >
               <i class="fa-solid fa-cart-shopping"></i>
-            </a>
+            </a> 
           </li>
         </ul>
 
@@ -123,7 +136,9 @@
           <div
             id="search-suggestions"
             class="absolute w-full bg-white border border-gray-300 rounded-lg mt-2 hidden"
-          ></div>
+          >
+            <!-- Suggestions will be dynamically inserted here -->
+          </div>
         </div>
       </div>
 
@@ -151,7 +166,7 @@
         <h1
           data-aos="fade-up"
           data-aos-delay="200"
-          class="text-8xl font-medium text-white mb-6"
+          class="text-8xl font-extrabold text-amber-700 mb-6"
         >
           Furniture
         </h1>
@@ -275,7 +290,7 @@
         <div
           data-aos="fade-up"
           data-aos-delay="600"
-          class="w-[240px] h-[290px] rounded-xl bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
+          class="bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
         >
           <a href="">
             <img
@@ -294,7 +309,7 @@
         <div
           data-aos="fade-up"
           data-aos-delay="700"
-          class="w-[240px] h-[290px] rounded-xl bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
+          class="bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
         >
           <a href="">
             <img
@@ -313,7 +328,7 @@
         <div
           data-aos="fade-up"
           data-aos-delay="800"
-          class="w-[240px] h-[290px] rounded-xl bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
+          class="bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
         >
           <a href="">
             <img
@@ -331,7 +346,7 @@
         <div
           data-aos="fade-up"
           data-aos-delay="900"
-          class="w-[240px] h-[290px] rounded-xl bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
+          class="bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
         >
           <a href="">
             <img
@@ -350,7 +365,7 @@
         <div
           data-aos="fade-up"
           data-aos-delay="1000"
-          class="w-[240px] h-[290px] rounded-xl bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
+          class="bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
         >
           <a href="">
             <img
@@ -368,7 +383,7 @@
       </div>
     </section>
     <section>
-      <h1 class="text-center font-bold text-4xl mt-6 text-amber-900">
+      <h1 class="text-sm text-center font-bold text-4xl mt-6 text-amber-900">
         GALLARY
       </h1>
       <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-2">
@@ -433,69 +448,202 @@
       </div>
     </section>
 
-    <section>
-      <div class="h-[650px] mt-10 flex">
-        <div class="w-[400px] h-[650px] ml-20">
-          <h1 class="text-7xl ml-7 font-bold mt-10">Styled</h1>
+    <!-- section Furniture -->
+    <section
+      class="my-[6em] flex items-center justify-between w-full px-4 sm:px-10"
+    >
+      <div
+        class="min-h-[650px] mt-10 flex flex-col lg:flex-row items-center justify-between w-full mx-auto max-w-[1500px] gap-[10em]"
+      >
+        <!-- Text Content -->
+        <div class="w-full lg:w-[45%] h-auto text-start">
+          <h1
+            data-aos="fade-right"
+            class="text-4xl sm:text-5xl font-bold mt-10"
+          >
+            Styled
+          </h1>
           <br />
-          <h1 class="text-7xl text-center font-bold text-amber-900">
+          <h1
+            data-aos="fade-right"
+            data-aos-delay="200"
+            class="text-5xl sm:text-7xl font-extrabold text-amber-900"
+          >
             Furniture
           </h1>
           <br />
-          <h1 class="text-7xl text-center font-bold">in Unique</h1>
+          <h1
+            data-aos="fade-right"
+            data-aos-delay="300"
+            class="text-4xl sm:text-5xl font-bold ml-3"
+          >
+            in Unique
+          </h1>
           <br />
-          <h1 class="text-7xl ml-7 font-bold">Style</h1>
-          <p class="p-5">
+          <h1
+            data-aos="fade-right"
+            data-aos-delay="400"
+            class="text-4xl sm:text-5xl font-bold ml-3"
+          >
+            Style
+          </h1>
+          <p
+            data-aos="fade-right"
+            data-aos-delay="500"
+            class="py-3 ml-3 text-sm sm:text-base"
+          >
             Discover a world of comfort and style with our handcrafted furniture
             for every room.
           </p>
           <a
+            data-aos="fade-right"
+            data-aos-delay="600"
             href="#"
-            class="mt-1 inline-block px-6 py-3 bg-amber-900 text-white rounded-lg hover:bg-blue-700 ml-7"
+            class="inline-block px-6 py-3 bg-amber-900 text-white rounded-lg hover:bg-amber-800 text-sm sm:text-base transition-all duration-300"
             >Shop Now</a
           >
         </div>
-        <div
-          class="w-[900px] h-[650px] grid grid-cols-2 grid-rows-2 gap-3 ml-20"
-        >
-          <div class="w-[270px] h-[260px] bg-white ml-[100px] mt-5 relative">
-            <img src="../team1-Furniture-company/src/images/table.png" alt="" />
+
+        <!-- Product Cards -->
+        <div class="w-full lg:w-[50%] mt-10 lg:mt-0">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-[3em]">
+            <!-- Product Card 1 -->
             <div
-              class="absolute w-[200px] h-[50px] bg-white ml-9 rounded-xl mt-[-25px] border-[3px] border-solid border-amber-900"
+              data-aos="fade-left"
+              class="w-full bg-white relative group cursor-pointer"
             >
-              <p class="text-sm text-center mt-3 text-amber-900">
-                Minimalist Japandi Chair
-              </p>
+              <div
+                class="w-full h-[200px] sm:h-[260px] mx-auto overflow-hidden"
+              >
+                <a href="#" class="block relative">
+                  <div
+                    class="absolute group-hover:opacity-100 transition-opacity duration-300 z-10"
+                  ></div>
+                  <img
+                    src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/p13-600x600.jpg"
+                    alt="Minimalist Japandi Chair"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </a>
+              </div>
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 -bottom-6 w-full px-4"
+              >
+                <div
+                  class="w-[150px] sm:w-[200px] h-[40px] sm:h-[50px] bg-white rounded-xl border-[3px] border-solid border-amber-900 transition-all duration-300 group-hover:bg-amber-900 group-hover:shadow-lg mx-auto"
+                >
+                  <p
+                    class="text-xs sm:text-sm text-center mt-2 sm:mt-3 text-amber-900 group-hover:text-white transition-colors duration-300"
+                  >
+                    Star Clock
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="w-[270px] h-[260px] bg-white ml-[50px] mt-5 relative">
-            <img src="../team1-Furniture-company/src/images/table.png" alt="" />
+
+            <!-- Product Card 2 -->
             <div
-              class="absolute w-[200px] h-[50px] bg-white ml-9 rounded-xl mt-[-25px] border-[3px] border-solid border-amber-900"
+              data-aos="fade-left"
+              data-aos-delay="200"
+              class="w-full bg-white relative group cursor-pointer"
             >
-              <p class="text-sm text-center mt-3 text-amber-900">
-                Minimalist Japandi Chair
-              </p>
+              <div
+                class="w-full h-[200px] sm:h-[260px] mx-auto overflow-hidden"
+              >
+                <a href="#" class="block relative">
+                  <div
+                    class="absolute group-hover:opacity-100 transition-opacity duration-300 z-10"
+                  ></div>
+                  <img
+                    src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/p21-600x600.jpg"
+                    alt="Minimalist Japandi Chair"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </a>
+              </div>
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 -bottom-6 w-full px-4"
+              >
+                <div
+                  class="w-[150px] sm:w-[200px] h-[40px] sm:h-[50px] bg-white rounded-xl border-[3px] border-solid border-amber-900 transition-all duration-300 group-hover:bg-amber-900 group-hover:shadow-lg mx-auto"
+                >
+                  <p
+                    class="text-xs sm:text-sm text-center mt-2 sm:mt-3 text-amber-900 group-hover:text-white transition-colors duration-300"
+                  >
+                    Wooden Stool
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="w-[270px] h-[260px] bg-white ml-[100px] mt-5 relative">
-            <img src="../team1-Furniture-company/src/images/table.png" alt="" />
+
+            <!-- Product Card 3 -->
             <div
-              class="absolute w-[200px] h-[50px] bg-white ml-9 rounded-xl mt-[-25px] border-[3px] border-solid border-amber-900"
+              data-aos="fade-left"
+              data-aos-delay="300"
+              class="w-full bg-white relative group cursor-pointer"
             >
-              <p class="text-sm text-center mt-3 text-amber-900">
-                Minimalist Japandi Chair
-              </p>
+              <div
+                class="w-full h-[200px] sm:h-[260px] mx-auto overflow-hidden"
+              >
+                <a href="#" class="block relative">
+                  <div
+                    class="absolute group-hover:opacity-100 transition-opacity duration-300 z-10"
+                  ></div>
+                  <img
+                    src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/p4-600x600.jpg"
+                    alt="Minimalist Japandi Chair"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </a>
+              </div>
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 -bottom-6 w-full px-4"
+              >
+                <div
+                  class="w-[150px] sm:w-[200px] h-[40px] sm:h-[50px] bg-white rounded-xl border-[3px] border-solid border-amber-900 transition-all duration-300 group-hover:bg-amber-900 group-hover:shadow-lg mx-auto"
+                >
+                  <p
+                    class="text-xs sm:text-sm text-center mt-2 sm:mt-3 text-amber-900 group-hover:text-white transition-colors duration-300"
+                  >
+                    Creative Chair
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="w-[270px] h-[260px] bg-white ml-[50px] mt-5 relative">
-            <img src="../team1-Furniture-company/src/images/table.png" alt="" />
+
+            <!-- Product Card 4 -->
             <div
-              class="absolute w-[200px] h-[50px] bg-white ml-9 rounded-xl mt-[-25px] border-[3px] border-solid border-amber-900"
+              data-aos="fade-left"
+              data-aos-delay="400"
+              class="w-full bg-white relative group cursor-pointer"
             >
-              <p class="text-sm text-center mt-3 text-amber-900">
-                Minimalist Japandi Chair
-              </p>
+              <div
+                class="w-full h-[200px] sm:h-[260px] mx-auto overflow-hidden"
+              >
+                <a href="#" class="block relative">
+                  <div
+                    class="absolute group-hover:opacity-100 transition-opacity duration-300 z-10"
+                  ></div>
+                  <img
+                    src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/p19-600x600.jpg"
+                    alt="Minimalist Japandi Chair"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </a>
+              </div>
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 -bottom-6 w-full px-4"
+              >
+                <div
+                  class="w-[150px] sm:w-[200px] h-[40px] sm:h-[50px] bg-white rounded-xl border-[3px] border-solid border-amber-900 transition-all duration-300 group-hover:bg-amber-900 group-hover:shadow-lg mx-auto"
+                >
+                  <p
+                    class="text-xs sm:text-sm text-center mt-2 sm:mt-3 text-amber-900 group-hover:text-white transition-colors duration-300"
+                  >
+                    Cone Lamp
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -503,11 +651,11 @@
     </section>
 
     <div
-      class="bg-url('../assets/footer-bg.jpg') bg-cover bg-center min-h-screen flex flex-col"
+      class="min-h-[10vh] flex flex-col border border-t-2 border-t-amber-600"
     >
       <div class="flex-grow bg-gradient-to-br from-gray-50 to-gray-200 p-8">
         <div
-          class="max-w-6xl mx-auto mt-[7em] flex flex-col md:flex-row justify-between items-start space-y-4 md:space-y-0"
+          class="max-w-[85%] w-auto mx-auto my-[5em] flex flex-col md:flex-row justify-between items-start space-y-4 md:space-y-0"
         >
           <!-- Left Section - remains the same -->
           <div class="space-y-4">
@@ -516,7 +664,7 @@
               <div class="flex items-center justify-center">
                 <div>
                   <img
-                    src="../assets/logo.png"
+                    src="./src/assets/Logo.png"
                     alt="logo"
                     class="w-[5rem] h-[5rem] cursor-pointer"
                   />
@@ -560,9 +708,11 @@
                 class="flex-grow p-2 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500"
               />
               <button
-                class="bg-amber-700 text-white p-2 px-4 hover:bg-amber-800 transition-colors"
+                class="border border-amber-700 text-white p-2 px-4 hover:bg-amber-800 transition-colors"
               >
-                <i class="fa-solid fa-envelope"></i>
+                <i
+                  class="fa-regular fa-envelope text-amber-700 hover:text-white"
+                ></i>
               </button>
             </div>
           </div>
@@ -614,13 +764,7 @@
 
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100,
-      });
-    </script>
+    <script src="./src/scripts/aos.js"></script>
 
     <!-- app.js -->
     <script src="./src/scripts/app.js"></script>
