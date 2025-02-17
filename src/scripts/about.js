@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-document.addEventListener("DOMContentLoaded", function () {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  });
-
-  const hiddenElements = document.querySelectorAll(".scroll-slide");
-  hiddenElements.forEach((el) => observer.observe(el));
-=======
 // const menuBtn = document.getElementById("menu-btn");
 // const mobileMenu = document.getElementById("mobile-menu");
 
@@ -102,5 +89,4 @@ class ProgressBar {
 // Initialize all progress bars
 document.querySelectorAll(".progress-bar").forEach((element) => {
   new ProgressBar(element);
->>>>>>> main
 });
