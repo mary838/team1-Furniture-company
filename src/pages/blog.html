@@ -20,28 +20,15 @@
       body {
         font-family: "Poppins", sans-serif;
       }
-      .slide {
-        position: relative;
-        animation: slideBottom 1s ease forwards;
-      }
-
-      @keyframes slideBottom {
-        0% {
-          transform: translateY(100%);
-          opacity: 0;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
     </style>
+    <script src="../scripts/scroll.js"></script>
+    <link rel="stylesheet" href="../styles/product.css" />
   </head>
   <body>
     <nav class="z-auto bg-white-600 p-0">
       <div class="px-6 mx-auto flex justify-between items-center bg-gray-200">
         <a href="#" class="text-white text-2xl font-bold"
-          ><img src="../images/Logo.png" alt="Logo" class="h-[50px]"
+          ><img src="../assets/Logo.png" alt="Logo" class="h-[50px]"
         /></a>
 
         <ul class="hidden md:flex space-x-6">
@@ -218,15 +205,15 @@
     </h2>
 
     <div class="grid md:grid-cols-2 items-center px-6 mt-6">
-      <div class="slide">
+      <div class="scroll-slide">
         <img
-          src="../images/blog 1.jpg"
+          src="../assets/blog 1.jpg"
           alt="Example Image"
           class="w-full rounded-lg shadow-lg hover:brightness-75 transition duration-300"
         />
       </div>
 
-      <div class="text-center md:text-left px-6 slide">
+      <div class="text-center md:text-left px-6 scroll-slide">
         <h2 class="text-4xl font-bold text-amber-900">Office Lounge</h2>
         <p class="mt-4 text-lg text-gray-600">5 Feb 2025</p>
         <p class="mt-4 text-lg text-gray-600">
@@ -247,15 +234,15 @@
     <div
       class="grid md:grid-cols-2 items-hover:brightness-75 transition duration-300center px-6 mt-6"
     >
-      <div class="slide">
+      <div class="scroll-slide">
         <img
-          src="../images/blog-2.jpg"
+          src="../assets/blog-2.jpg"
           alt="Example Image"
           class="w-full rounded-lg shadow-lg hover:brightness-75 transition duration-300"
         />
       </div>
 
-      <div class="text-center md:text-left px-6 slide">
+      <div class="text-center md:text-left px-6 scroll-slide">
         <h2 class="text-4xl font-bold text-amber-900">Much Space</h2>
         <p class="mt-4 text-lg text-gray-600">5 Feb 2025</p>
         <p class="mt-4 text-lg text-gray-600">
@@ -276,16 +263,16 @@
     <div class="grid md:grid-cols-2 items-center px-6 mt-6">
       <!-- Left: Image -->
 
-      <div class="slide">
+      <div class="scroll-slide">
         <img
-          src="../images/blog-3.png"
+          src="../assets/blog-3.png"
           alt="Example Image"
           class="w-full rounded-lg shadow-lg"
         />
       </div>
 
       <!-- Right: Text Content -->
-      <div class="text-center md:text-left px-6 slide">
+      <div class="text-center md:text-left px-6 scroll-slide">
         <h2 class="text-4xl font-bold text-amber-900">Healthy Bed</h2>
         <p class="mt-4 text-lg text-gray-600">5 Feb 2025</p>
         <p class="mt-4 text-lg text-gray-600">
@@ -316,7 +303,7 @@
               <div class="flex items-center justify-center">
                 <div>
                   <img
-                    src="../images/Logo.png"
+                    src="../assets/Logo.png"
                     alt="logo"
                     class="w-[5rem] h-[5rem] cursor-pointer"
                   />
