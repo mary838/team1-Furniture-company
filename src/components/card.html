@@ -16,26 +16,55 @@
     <link rel="stylesheet" href="../styles/output.css" />
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .slide {
+        position: relative;
+        animation: slideBottom 1s ease forwards;
+      }
+
+      @keyframes slideBottom {
+        0% {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    </style>
+=======
+>>>>>>> main
     <!-- Custom animation CSS -->
     <link rel="stylesheet" href="../styles/animation.css" />
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- appcss -->
     <link rel="stylesheet" href="../styles/style.css" />
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
   </head>
   <body>
     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <a href="../pages/faq.html">
+      <a href="">
         <div
-          class="relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6"
+          class="slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
         >
           <div class="p-2">
             <img
-              class="w-full rounded-xl"
-              src="../images/blog-3.png"
+              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
+              src="../images/bed-1.jpg"
               alt="Card Image"
             />
-            <div class="flex-2 right-10 top-[40px] absolute">
+            <div class="flex-2 right-10 top-[40px] absolute text-amber-900">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -44,14 +73,14 @@
             </div>
           </div>
           <div class="py-4">
-            <h2 class="text-3xl text-gray-800 text-center">Sofa Coach</h2>
+            <h2 class="text-3xl text-gray-800 text-center">Bed Buying Guide</h2>
             <div class="flex">
               <p
                 class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
               >
-                $ 550
+                $ 1150
               </p>
-              <p class="text-red-500 p-4 flex-2 text-3xl">$ 440</p>
+              <p class="text-red-500 p-4 flex-2 text-3xl">$ 1010</p>
             </div>
           </div>
         </div>

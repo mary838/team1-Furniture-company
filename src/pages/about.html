@@ -3,8 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
+    <title>About us</title>
     <script src="https://cdn.tailwindcss.com"></script>
+<<<<<<< HEAD
+
+    <script src="../scripts/header.js"></script>
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+=======
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+>>>>>>> main
     <!-- fontfamily -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
@@ -21,27 +32,29 @@
         font-family: "Poppins", sans-serif;
       }
     </style>
-    <script src="../scripts/scroll.js"></script>
-    <link rel="stylesheet" href="../styles/product.css" />
   </head>
   <body>
-    <nav class="z-auto bg-white-600 p-0">
+    <nav class="z-auto bg-white-600 p-0 bg-gray-200">
       <div class="px-6 mx-auto flex justify-between items-center bg-gray-200">
-        <a href="#" class="text-white text-2xl font-bold"
-          ><img src="../assets/Logo.png" alt="Logo" class="h-[50px]"
-        /></a>
+        <a href="/index.html" class="text-white text-2xl font-bold">
+          <img src="../assets/Logo.png" alt="Logo" class="h-[50px] my-2" />
+        </a>
 
         <ul class="hidden md:flex space-x-6">
           <li>
+<<<<<<< HEAD
             <a
               href="/team1-Furniture-company/index.html"
               class="text-amber-900 hover:text-blue-900"
+=======
+            <a href="./index.html" class="text-amber-900 hover:text-blue-900"
+>>>>>>> main
               >Home</a
             >
           </li>
           <li>
             <a
-              href="../pages/about.html"
+              href="./src/pages/about.html"
               class="text-amber-900 hover:text-blue-900"
               >About</a
             >
@@ -81,7 +94,7 @@
               </li>
               <li>
                 <a
-                  href="../pages/mirror-g.html"
+                  href="../pages/blog.html"
                   class="block px-4 py-2 hover:text-blue-900"
                   >Mirror</a
                 >
@@ -103,7 +116,11 @@
             </ul>
           </li>
           <li>
-            <a href="#" class="text-amber-900 hover:text-blue-900">Blog</a>
+            <a
+              href="../pages/blog.html"
+              class="text-amber-900 hover:text-blue-900"
+              >Blog</a
+            >
           </li>
           <li>
             <a
@@ -112,10 +129,9 @@
               >Contact</a
             >
           </li>
-
           <li>
-            <a href="#"
-              ><i
+            <a href="#" id="search-icon">
+              <i
                 class="fa-solid fa-magnifying-glass text-amber-900 hover:text-blue-900"
               ></i>
             </a>
@@ -139,32 +155,41 @@
           ☰
         </button>
       </div>
+
+      <!-- Search Bar -->
+      <div
+        id="search-bar"
+        class="hidden w-full bg-gray-200 p-4 transition-all duration-300 ease-in-out"
+      >
+        <div class="relative">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search..."
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
+          />
+          <!-- Search Suggestions -->
+          <div
+            id="search-suggestions"
+            class="absolute w-full bg-white border border-gray-300 rounded-lg mt-2 hidden"
+          >
+            <!-- Suggestions will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+
       <!-- Mobile Menu -->
       <ul
         id="mobile-menu"
         class="hidden md:hidden bg-blue-700 text-white text-center space-y-2 p-4"
       >
-<<<<<<< HEAD:src/pages/Product Payment.html
-        <li><a href="#" class="block py-2">Home</a></li>
-        <li><a href="#" class="block py-2">About</a></li>
-        <li><a href="#" class="block py-2">Product</a></li>
-        <li><a href="#" class="block py-2">Pages</a></li>
-        <li><a href="#" class="block py-2">Category</a></li>
-        <li><a href="#" class="block py-2">Blog</a></li>
-        <li><a href="#" class="block py-2">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="h-[500px] bg-black">
-        <div class="w-[300px] h-[300px] bg-white rounded-2xl ml-[10px]"></div>
-      </div>
-    <script src="../scripts/about.js"></script>
-=======
+<<<<<<< HEAD
         <li>
           <a href="/team1-Furniture-company/index.html" class="block py-2"
             >Home</a
           >
         </li>
-        <li><a href="../pages/about.html" class="block py-2">About</a></li>
+        <li><a href="#" class="block py-2">About</a></li>
         <li><a href="../pages/product.html" class="block py-2">Product</a></li>
         <li><a href="../pages/pages.html" class="block py-2">Pages</a></li>
         <li class="relative group">
@@ -211,105 +236,300 @@
         </li>
 
         <li></li>
-        <li><a href="#" class="block py-2">Blog</a></li>
+        <li><a href="../pages/blog.html" class="block py-2">Blog</a></li>
         <li><a href="../pages/contact.html" class="block py-2">Contact</a></li>
+=======
+        <!-- Your mobile menu items -->
+>>>>>>> main
       </ul>
     </nav>
-    <h2 class="text-4xl font-bold text-amber-900 mt-4">
-      Furniture <span>Blog</span>
-    </h2>
 
-    <div class="grid md:grid-cols-2 items-center px-6 mt-6">
-      <div class="scroll-slide">
-        <img
-          src="../assets/blog 1.jpg"
-          alt="Example Image"
-          class="w-full rounded-lg shadow-lg hover:brightness-75 transition duration-300"
-        />
-      </div>
-
-      <div class="text-center md:text-left px-6 scroll-slide">
-        <h2 class="text-4xl font-bold text-amber-900">Office Lounge</h2>
-        <p class="mt-4 text-lg text-gray-600">5 Feb 2025</p>
-        <p class="mt-4 text-lg text-gray-600">
-          Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec
-          sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta
-          dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor
-          accumsan tincidunt. Sed porttitor lectus nibh. Pellentesque in ipsum
-          id orci porta dapibus. 
-        </p>
-        <a
-          href="../pages/blog-readmore.html"
-          class="mt-6 inline-block px-6 py-3 bg-amber-900 text-white rounded-lg hover:bg-blue-700"
-          >Read More</a
-        >
-      </div>
-    </div>
-
+    <!-- hero section -->
     <div
-      class="grid md:grid-cols-2 items-hover:brightness-75 transition duration-300center px-6 mt-6"
+      class="relative flex items-center justify-center min-h-screen bg-cover bg-center"
+      style="
+        background-image: url('https://wallpapers.com/images/hd/beautiful-tan-modern-furniture-1p8lqahjzvgac2vw.jpg');
+      "
     >
-      <div class="scroll-slide">
-        <img
-          src="../assets/blog-2.jpg"
-          alt="Example Image"
-          class="w-full rounded-lg shadow-lg hover:brightness-75 transition duration-300"
-        />
-      </div>
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <!-- Dark overlay -->
 
-      <div class="text-center md:text-left px-6 scroll-slide">
-        <h2 class="text-4xl font-bold text-amber-900">Much Space</h2>
-        <p class="mt-4 text-lg text-gray-600">5 Feb 2025</p>
-        <p class="mt-4 text-lg text-gray-600">
-          Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec
-          sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta
-          dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor
-          accumsan tincidunt. Sed porttitor lectus nibh. Pellentesque in ipsum
-          id orci porta dapibus. 
+      <div
+        class="p-8 bg-gray/2 border border-white/30 rounded-lg shadow-lg max-w-lg text-center"
+      >
+        <h1 data-aos="fade-down" class="text-5xl font-bold text-amber-700">
+          About Us
+        </h1>
+        <h2 data-aos="fade-up" class="text-3xl font-bold text-white">
+          Who we are ?
+        </h2>
+        <p data-aos="fade-up" data-aos-delay="200" class="mt-4 text-white">
+          Furniture can be a product of design and is considered a form of
+          decorative art. In addition to furniture's functional role, it can
+          serve a symbolic or religious purpose.
         </p>
-        <a
-          href="../pages/blog-readmore.html"
-          class="mt-6 inline-block px-6 py-3 bg-amber-900 text-white rounded-lg hover:bg-blue-700"
-          >Read More</a
-        >
       </div>
     </div>
-
-    <div class="grid md:grid-cols-2 items-center px-6 mt-6">
+    <div
+      class="flex flex-col md:flex-row items-center min-h-screen px-6 max-w-7xl mx-auto p-8"
+    >
       <!-- Left: Image -->
-
-      <div class="scroll-slide">
+      <div data-aos="fade-right" class="md:w-1/2">
         <img
-          src="../assets/blog-3.png"
+          src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/img4.jpg"
           alt="Example Image"
           class="w-full rounded-lg shadow-lg"
         />
       </div>
 
       <!-- Right: Text Content -->
-      <div class="text-center md:text-left px-6 scroll-slide">
-        <h2 class="text-4xl font-bold text-amber-900">Healthy Bed</h2>
-        <p class="mt-4 text-lg text-gray-600">5 Feb 2025</p>
-        <p class="mt-4 text-lg text-gray-600">
-          Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec
-          sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta
-          dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor
-          accumsan tincidunt. Sed porttitor lectus nibh. Pellentesque in ipsum
-          id orci porta dapibus. 
+      <div
+        data-aos="fade-left"
+        class="md:w-1/2 text-center md:text-left px-6 mb-5"
+      >
+        <p class="text-lg text-black">WHO WE ARE ?</p>
+        <h2 class="text-4xl font-extrabold text-amber-700">About Us</h2>
+        <p class="mt-4 text-lg text-black">
+          Furniture can be a product of design and is considered a form of
+          decorative art. In addition to furniture's functional role, it can
+          serve a symbolic or religious purpose. It can be made from many
+          materials, including metal, plastic, and wood. Furniture can be made
+          using a variety of woodworking joints which often reflect the local
+          culture.
         </p>
-        <a
-          href="../pages/blog-readmore.html"
-          class="mt-6 inline-block px-6 py-3 text-white rounded-lg hover:bg-blue-700 bg-amber-900"
-          >Read More</a
-        >
+
+        <p class="mt-4 text-lg text-black">
+          Early furniture from this period is known from artwork such as a Venus
+          figurine found in Russia, depicting the goddess on a throne. The first
+          surviving extant furniture is in the homes of Skara Brae in Scotland,
+          and includes cupboards, dressers and beds all constructed from stone.
+          Complex construction techniques such as joinery began in the early
+          dynastic period of ancient Egypt. This era saw constructed wooden.
+        </p>
+        <div class="grid grid-cols-2 gap-6 max-w-2xl mx-auto mt-5">
+          <!-- Feature 1 -->
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay="200"
+            class="flex items-center space-x-4"
+          >
+            <div
+              class="flex items-center justify-center w-8 h-8 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer"
+            >
+              <svg
+                class="text-white w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <span class="text-black font-bold">GOOD WOOD</span>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay="200"
+            class="flex items-center space-x-4"
+          >
+            <div
+              class="flex items-center justify-center w-8 h-8 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer"
+            >
+              <svg
+                class="text-white w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <span class="text-black font-bold">NATURAL MATERIALS</span>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+            class="flex items-center space-x-4"
+          >
+            <div
+              class="flex items-center justify-center w-8 h-8 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer"
+            >
+              <svg
+                class="text-white w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <span class="text-black font-bold">BEST FABRICS</span>
+          </div>
+
+          <!-- Feature 4 -->
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+            class="flex items-center space-x-4"
+          >
+            <div
+              class="flex items-center justify-center w-8 h-8 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer"
+            >
+              <svg
+                class="text-white w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <span class="text-black font-bold">FREE SHIPPING</span>
+          </div>
+
+          <!-- Feature 5 -->
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay="400"
+            class="flex items-center space-x-4"
+          >
+            <div
+              class="flex items-center justify-center w-8 h-8 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer"
+            >
+              <svg
+                class="text-white w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <span class="text-black font-bold">15 DAYS REFUND</span>
+          </div>
+
+          <!-- Feature 6 -->
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay="400"
+            class="flex items-center space-x-4"
+          >
+            <div
+              class="flex items-center justify-center w-8 h-8 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer"
+            >
+              <svg
+                class="text-white w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <span class="text-black font-bold">FRIENDLY SUPPORT</span>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="max-w-7xl mx-auto p-8">
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- left side - Content -->
+        <div data-aos="fade-right">
+          <div class="mb-12">
+            <h2 class="text-black mb-2">What we've done?</h2>
+            <h1 class="text-4xl font-bold mb-6 tetx-black">
+              Our <span class="text-amber-700">History</span>
+            </h1>
+            <p class="text-black leading-relaxed">
+              People have been using natural objects, such as tree stumps, rocks
+              and moss, as furniture since the beginning of human civilization.
+              Archaeological research shows that from around 30,000 years ago,
+              people began constructing and carving their own furniture, using
+              wood, stone, and animal bones.
+            </p>
+          </div>
+
+          <!-- Metrics -->
+          <div class="space-y-6">
+            <div
+              class="progress-bar"
+              data-label="Clients Satisfaction"
+              data-percentage="97"
+              data-delay="100"
+              data-aos="zoom-in-up"
+              data-aos-delay="200"
+            ></div>
+            <div
+              class="progress-bar"
+              data-label="Furniture Repairment"
+              data-percentage="94"
+              data-delay="300"
+              data-aos="zoom-in-up"
+              data-aos-delay="300"
+            ></div>
+            <div
+              class="progress-bar"
+              data-label="Diamond Certificates"
+              data-percentage="92"
+              data-delay="500"
+              data-aos="zoom-in-up"
+              data-aos-delay="400"
+            ></div>
+          </div>
+        </div>
+        <!-- right side - Image and Video Button -->
+        <div data-aos="fade-left" class="relative">
+          <img
+            src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/img3.jpg"
+            alt="Interior space"
+            class="w-full rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
     <div
-      class="bg-url('../assets/footer-bg.jpg') bg-cover bg-center min-h-screen flex flex-col"
+      class="min-h-[10vh] flex flex-col border border-t-2 border-t-amber-600"
     >
       <div class="flex-grow bg-gradient-to-br from-gray-50 to-gray-200 p-8">
         <div
-          class="max-w-6xl mx-auto mt-[7em] flex flex-col md:flex-row justify-between items-start space-y-4 md:space-y-0"
+          class="max-w-[85%] w-auto mx-auto my-[5em] flex flex-col md:flex-row justify-between items-start space-y-4 md:space-y-0"
         >
           <!-- Left Section - remains the same -->
           <div class="space-y-4">
@@ -318,7 +538,11 @@
               <div class="flex items-center justify-center">
                 <div>
                   <img
+<<<<<<< HEAD
                     src="../assets/Logo.png"
+=======
+                    src="./src/assets/Logo.png"
+>>>>>>> main
                     alt="logo"
                     class="w-[5rem] h-[5rem] cursor-pointer"
                   />
@@ -362,9 +586,11 @@
                 class="flex-grow p-2 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500"
               />
               <button
-                class="bg-amber-700 text-white p-2 px-4 hover:bg-amber-800 transition-colors"
+                class="border border-amber-700 text-white p-2 px-4 hover:bg-amber-800 transition-colors"
               >
-                <i class="fa-solid fa-envelope"></i>
+                <i
+                  class="fa-regular fa-envelope text-amber-700 hover:text-white"
+                ></i>
               </button>
             </div>
           </div>
@@ -413,7 +639,15 @@
         </div>
       </div>
     </div>
+
+<<<<<<< HEAD
     <script src="../scripts/menu.js"></script>
->>>>>>> main:src/pages/blog.html
+=======
+    <script src="../scripts/about.js"></script>
+>>>>>>> main
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../scripts/aos.js"></script>
   </body>
 </html>

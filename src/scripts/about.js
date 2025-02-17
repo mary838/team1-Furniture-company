@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -14,6 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // const menuBtn = document.getElementById("menu-btn");
 // const mobileMenu = document.getElementById("mobile-menu");
 
+=======
+// const menuBtn = document.getElementById("menu-btn");
+// const mobileMenu = document.getElementById("mobile-menu");
+
+>>>>>>> main
 // menuBtn.addEventListener("click", () => {
 //   mobileMenu.classList.toggle("hidden");
 // });
@@ -102,6 +108,9 @@ class ProgressBar {
 // Initialize all progress bars
 document.querySelectorAll(".progress-bar").forEach((element) => {
   new ProgressBar(element);
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 });
 

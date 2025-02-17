@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product</title>
+    <title>Sofa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- fontfamily -->
     <link
@@ -15,28 +15,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <style>
       body {
         font-family: "Poppins", sans-serif;
       }
-      /* .slide {
-        position: relative;
-        animation: slideBottom 1s ease forwards;
-      }
-
-      @keyframes slideBottom {
-        0% {
-          transform: translateY(100%);
-          opacity: 0;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      } */
     </style>
-    <script src="../scripts/about.js"></script>
+    <script src="../scripts/scroll.js"></script>
     <link rel="stylesheet" href="../styles/product.css" />
   </head>
   <body>
@@ -48,13 +35,25 @@
 
         <ul class="hidden md:flex space-x-6">
           <li>
-            <a href="#" class="text-amber-900 hover:text-blue-900">Home</a>
+            <a
+              href="/team1-Furniture-company/index.html"
+              class="text-amber-900 hover:text-blue-900"
+              >Home</a
+            >
           </li>
           <li>
-            <a href="#" class="text-amber-900 hover:text-blue-900">About</a>
+            <a
+              href="../pages/about.html"
+              class="text-amber-900 hover:text-blue-900"
+              >About</a
+            >
           </li>
           <li>
-            <a href="#" class="text-amber-900 hover:text-blue-900">Product</a>
+            <a
+              href="../pages/product.html"
+              class="text-amber-900 hover:text-blue-900"
+              >Product</a
+            >
           </li>
           <li>
             <a
@@ -66,7 +65,7 @@
           <li class="relative group">
             <button class="text-amber-900 hover:text-blue-900">Category</button>
             <ul
-              class="absolute left-0 mt-2 w-40 bg-white shadow-md z-50 rounded-lg hidden group-hover:block"
+              class="z-50 absolute left-0 mt-2 w-40 bg-white shadow-md rounded-lg hidden group-hover:block"
             >
               <li>
                 <a
@@ -76,11 +75,7 @@
                 >
               </li>
               <li>
-                <a
-                  href="../pages/sofa-g.html"
-                  class="block px-4 py-2 hover:text-blue-900"
-                  >Sofa</a
-                >
+                <a href="#" class="block px-4 py-2 hover:text-blue-900">Sofa</a>
               </li>
               <li>
                 <a
@@ -157,7 +152,7 @@
           >
         </li>
         <li><a href="../pages/about.html" class="block py-2">About</a></li>
-        <li><a href="#" class="block py-2">Product</a></li>
+        <li><a href="../pages/product.html" class="block py-2">Product</a></li>
         <li><a href="../pages/pages.html" class="block py-2">Pages</a></li>
         <li class="relative group">
           <button class="hover:text-blue-900">Category</button>
@@ -172,9 +167,7 @@
               >
             </li>
             <li>
-              <a
-                href="../pages/sofa-g.html"
-                class="block px-4 py-2 hover:text-blue-900 text-black"
+              <a href="#" class="block px-4 py-2 hover:text-blue-900 text-black"
                 >Sofa</a
               >
             </li>
@@ -203,24 +196,29 @@
         </li>
 
         <li></li>
-        <li></li>
+        <li><a href="../pages/blog.html" class="block py-2">Blog</a></li>
+        <li><a href="../pages/contact.html" class="block py-2">Contact</a></li>
       </ul>
     </nav>
-    <h1 class="text-5xl text-center mt-8 font-bold">
-      Popular <span class="text-amber-900">Furniture</span>
+
+    <h1
+      class="text-5xl mt-8 font-bold hover:text-amber-200 text-amber-900 ms-6"
+    >
+      Sofa
     </h1>
+    <p class="mt-4 ms-6">Here product all of Sofa</p>
     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
       <a href="">
         <div
-          class="scroll-slide slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-amber-700"
+          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
         >
           <div class="p-2">
             <img
               class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-              src="../images/p6.jpg"
+              src="../images/sofa-1.jpg"
               alt="Card Image"
             />
-            <div class="flex-2 right-10 top-[40px] absolute">
+            <div class="flex-2 right-10 top-[40px] absolute text-amber-900">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -229,7 +227,298 @@
             </div>
           </div>
           <div class="py-4">
-            <h2 class="text-3xl text-gray-800 text-center">Cosy Sofa</h2>
+            <h2 class="text-3xl text-gray-800 text-center">Sofa Couch</h2>
+            <div class="flex">
+              <p
+                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
+              >
+                $ 550
+              </p>
+              <p class="text-red-500 p-4 flex-2 text-3xl">$ 440</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div
+          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
+        >
+          <div class="p-2">
+            <img
+              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
+              src="../images/sofa2.jpg"
+              alt="Card Image"
+            />
+            <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="py-4">
+            <h2 class="text-3xl text-gray-800 text-center">Puffy Sofa</h2>
+            <div class="flex">
+              <p
+                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
+              >
+                $ 780
+              </p>
+              <p class="text-red-500 p-4 flex-2 text-3xl">$ 615</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div
+          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
+        >
+          <div class="p-2">
+            <img
+              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
+              src="../images/sofa3.jpg"
+              alt="Card Image"
+            />
+            <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="py-4">
+            <h2 class="text-3xl text-gray-800 text-center">Fabric Sofa</h2>
+
+            <div class="flex">
+              <p
+                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
+              >
+                $ 715
+              </p>
+              <p class="text-red-500 p-4 flex-2 text-3xl">$ 699</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div
+          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
+        >
+          <div class="p-2">
+            <img
+              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
+              src="../images/sofa4-4.jpg"
+              alt="Card Image"
+            />
+            <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="py-4">
+            <h2 class="text-3xl text-gray-800 text-center">Seater Sofa</h2>
+            <div class="flex">
+              <p
+                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
+              >
+                $ 512
+              </p>
+              <p class="text-red-500 p-4 flex-2 text-3xl">$ 469</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div
+          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
+        >
+          <div class="p-2">
+            <img
+              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
+              src="../images/sofa4.jpg"
+              alt="Card Image"
+            />
+            <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="py-4">
+            <h2 class="text-3xl text-gray-800 text-center">Coured Sofa</h2>
+            <div class="flex">
+              <p
+                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
+              >
+                $ 997
+              </p>
+              <p class="text-red-500 p-4 flex-2 text-3xl">$ 950</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div
+          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
+        >
+          <div class="p-2">
+            <img
+              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
+              src="../images/sofa6.jpg"
+              alt="Card Image"
+            />
+            <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="py-4">
+            <h2 class="text-3xl text-gray-800 text-center">Emily Flared</h2>
+            <div class="flex">
+              <p
+                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
+              >
+                $ 410
+              </p>
+              <p class="text-red-500 p-4 flex-2 text-3xl">$ 389</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div
+          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
+        >
+          <div class="p-2">
+            <img
+              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
+              src="../images/sofa7.jpg"
+              alt="Card Image"
+            />
+            <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="py-4">
+            <h2 class="text-3xl text-gray-800 text-center">Oscar Sofa</h2>
+            <div class="flex">
+              <p
+                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
+              >
+                $ 550
+              </p>
+              <p class="text-red-500 p-4 flex-2 text-3xl">$ 440</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div
+          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
+        >
+          <div class="p-2">
+            <img
+              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
+              src="../images/sofa8.jpg"
+              alt="Card Image"
+            />
+            <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="py-4">
+            <h2 class="text-3xl text-gray-800 text-center">
+              Bubble Boule Sofa
+            </h2>
+            <div class="flex">
+              <p
+                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
+              >
+                $ 780
+              </p>
+              <p class="text-red-500 p-4 flex-2 text-3xl">$ 615</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div
+          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
+        >
+          <div class="p-2">
+            <img
+              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
+              src="../images/sofa9.jpg"
+              alt="Card Image"
+            />
+            <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="py-4">
+            <h2 class="text-3xl text-gray-800 text-center">Lazy Sofa</h2>
+            <div class="flex">
+              <p
+                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
+              >
+                $ 715
+              </p>
+              <p class="text-red-500 p-4 flex-2 text-3xl">$ 699</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="">
+        <div
+          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
+        >
+          <div class="p-2">
+            <img
+              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
+              src="../images/sofa10.jpg"
+              alt="Card Image"
+            />
+            <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+          <div class="py-4">
+            <h2 class="text-3xl text-gray-800 text-center">Leather Sofa</h2>
             <div class="flex">
               <p
                 class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
@@ -243,15 +532,15 @@
       </a>
       <a href="">
         <div
-          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-amber-700"
+          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
         >
           <div class="p-2">
             <img
               class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-              src="../images/pages-table.jpg"
+              src="../images/sofa11.jpg"
               alt="Card Image"
             />
-            <div class="absolute flex-2 right-10 top-[40px]">
+            <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -261,29 +550,29 @@
           </div>
 
           <div class="py-4">
-            <h2 class="text-3xl text-gray-800 text-center">Corner Loung</h2>
+            <h2 class="text-3xl text-gray-800 text-center">Sofa Sets</h2>
             <div class="flex">
               <p
                 class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
               >
-                $ 1340
+                $ 450
               </p>
-              <p class="text-red-500 p-4 flex-2 text-3xl">$ 990</p>
+              <p class="text-red-500 p-4 flex-2 text-3xl">$ 399</p>
             </div>
           </div>
         </div>
       </a>
       <a href="">
         <div
-          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-amber-700"
+          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
         >
           <div class="p-2">
             <img
               class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-              src="../images/product-table1.jpg"
+              src="../images/sofa12.jpg"
               alt="Card Image"
             />
-            <div class="absolute flex-2 right-10 top-[40px]">
+            <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -293,212 +582,20 @@
           </div>
 
           <div class="py-4">
-            <h2 class="text-3xl text-gray-800 text-center"></h2>
-            Cosy Sofa
+            <h2 class="text-3xl text-gray-800 text-center">Traditional Sofa</h2>
             <div class="flex">
               <p
                 class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
               >
-                $ 899
+                $ 450
               </p>
-              <p class="text-red-500 p-4 flex-2 text-3xl">$ 699</p>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="">
-        <div
-          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-amber-700"
-        >
-          <div class="p-2">
-            <img
-              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-              src="../images/clock.jpg"
-              alt="Card Image"
-            />
-            <div class="absolute flex-2 right-10 top-[40px]">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-
-          <div class="py-4">
-            <h2 class="text-3xl text-gray-800 text-center">Stone Clock</h2>
-            <div class="flex">
-              <p
-                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-              >
-                $ 120
-              </p>
-              <p class="text-red-500 p-4 flex-2 text-3xl">$ 79</p>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="">
-        <div
-          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-amber-700"
-        >
-          <div class="p-2">
-            <img
-              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-              src="../images/white chair.jpg"
-              alt="Card Image"
-            />
-            <div class="absolute flex-2 right-10 top-[40px]">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-
-          <div class="py-4">
-            <h2 class="text-3xl text-gray-800 text-center">White Chair</h2>
-            <div class="flex">
-              <p
-                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-              >
-                $ 220
-              </p>
-              <p class="text-red-500 p-4 flex-2 text-3xl">$</p>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="">
-        <div
-          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-amber-700"
-        >
-          <div class="p-2">
-            <img
-              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-              src="../images/lamp1.jpg"
-              alt="Card Image"
-            />
-            <div class="absolute flex-2 right-10 top-[40px]">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-
-          <div class="py-4">
-            <h2 class="text-3xl text-gray-800 text-center">Sofa Coach</h2>
-            <div class="flex">
-              <p
-                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-              >
-                $ 550
-              </p>
-              <p class="text-red-500 p-4 flex-2 text-3xl">$ 440</p>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="">
-        <div
-          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-amber-700"
-        >
-          <div class="p-2">
-            <img
-              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-              src="../images/sofa-product.jpg"
-              alt="Card Image"
-            />
-            <div class="absolute flex-2 right-10 top-[40px]">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-
-          <div class="py-4">
-            <h2 class="text-3xl text-gray-800 text-center">Sofa Coach</h2>
-            <div class="flex">
-              <p
-                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-              >
-                $ 550
-              </p>
-              <p class="text-red-500 p-4 flex-2 text-3xl">$ 440</p>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="">
-        <div
-          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-amber-700"
-        >
-          <div class="p-2">
-            <img
-              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-              src="../images/product-table.jpg"
-              alt="Card Image"
-            />
-            <div class="absolute flex-2 right-10 top-[40px]">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-
-          <div class="py-4">
-            <h2 class="text-3xl text-gray-800 text-center">Sofa Coach</h2>
-            <div class="flex">
-              <p
-                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-              >
-                $ 550
-              </p>
-              <p class="text-red-500 p-4 flex-2 text-3xl">$ 440</p>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="">
-        <div
-          class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-amber-700"
-        >
-          <div class="p-2">
-            <img
-              class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-              src="../images/clock.jpg"
-              alt="Card Image"
-            />
-            <div class="absolute flex-2 right-10 top-[40px]">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-          </div>
-
-          <div class="py-4">
-            <h2 class="text-3xl text-gray-800 text-center">Sofa Coach</h2>
-            <div class="flex">
-              <p
-                class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-              >
-                $ 550
-              </p>
-              <p class="text-red-500 p-4 flex-2 text-3xl">$ 440</p>
+              <p class="text-red-500 p-4 flex-2 text-3xl">$ 399</p>
             </div>
           </div>
         </div>
       </a>
     </div>
+
     <div
       class="bg-url('../assets/footer-bg.jpg') bg-cover bg-center min-h-screen flex flex-col"
     >
@@ -513,7 +610,7 @@
               <div class="flex items-center justify-center">
                 <div>
                   <img
-                    src="../images/Logo.png"
+                    src="../assets/Logo.png"
                     alt="logo"
                     class="w-[5rem] h-[5rem] cursor-pointer"
                   />
