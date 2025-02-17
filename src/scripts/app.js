@@ -1,3 +1,4 @@
+// for icon functionality
 document.addEventListener("DOMContentLoaded", function () {
   // Search functionality
   const searchIcon = document.getElementById("search-icon");
@@ -75,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Auth functionality
+  // for login form functionality
   const userIcon = document.getElementById("userIcon");
   const authModal = document.getElementById("authModal");
   const authBackdrop = document.getElementById("authBackdrop");
@@ -181,4 +182,32 @@ document.addEventListener("DOMContentLoaded", function () {
       `Signup Attempt: Name: ${name}, Email: ${email}, Password: ${password}`
     );
   });
+});
+
+// for dropdown menu functionality
+const categoryTrigger = document.querySelector(".category-trigger");
+const megaMenu = document.querySelector(".mega-menu-container");
+
+categoryTrigger.addEventListener("mouseenter", () => {
+  megaMenu.classList.add("active");
+});
+
+categoryTrigger.addEventListener("mouseleave", () => {
+  megaMenu.classList.remove("active");
+});
+
+megaMenu.addEventListener("mouseenter", () => {
+  megaMenu.classList.add("active");
+});
+
+megaMenu.addEventListener("mouseleave", () => {
+  megaMenu.classList.remove("active");
+});
+
+// Mobile menu toggle
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
 });
