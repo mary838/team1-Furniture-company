@@ -3,30 +3,235 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Footer section</title>
-    <!-- Add Font Awesome -->
+    <title>Payment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontfamily -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icon -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <!-- output -->
-    <link rel="stylesheet" href="../styles/output.css" />
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom animation CSS -->
-    <link rel="stylesheet" href="../styles/animation.css" />
-    <!-- AOS -->
+    <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- appcss -->
-    <link rel="stylesheet" href="../styles/style.css" />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+    <script src="../scripts/scroll.js"></script>
+    <link rel="stylesheet" href="../styles/product.css" />
   </head>
   <body>
-    <!-- footer -->
+    <nav class="z-auto bg-white-600 p-0">
+      <div class="px-6 mx-auto flex justify-between items-center bg-gray-200">
+        <a href="#" class="text-white text-2xl font-bold"
+          ><img src="../assets/Logo.png" alt="Logo" class="h-[50px] my-2"
+        /></a>
+
+        <ul class="hidden md:flex space-x-6">
+          <li>
+            <a
+              href="/team1-Furniture-company/index.html"
+              class="text-amber-900 hover:text-blue-900"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../pages/about.html"
+              class="text-amber-900 hover:text-blue-900"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="../pages/product.html"
+              class="text-amber-900 hover:text-blue-900"
+              >Product</a
+            >
+          </li>
+          <li>
+            <a
+              href="../pages/pages.html"
+              class="text-amber-900 hover:text-blue-900"
+              >Pages</a
+            >
+          </li>
+          <li class="relative group">
+            <button class="text-amber-900 hover:text-blue-900">Category</button>
+            <ul
+              class="z-50 absolute left-0 mt-2 w-40 bg-white shadow-md rounded-lg hidden group-hover:block"
+            >
+              <li>
+                <a
+                  href="../pages/table-g.html"
+                  class="block px-4 py-2 hover:text-blue-900"
+                  >Table</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../pages/sofa-g.html"
+                  class="block px-4 py-2 hover:text-blue-900"
+                  >Sofa</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../pages/mirror-g.html"
+                  class="block px-4 py-2 hover:text-blue-900"
+                  >Mirror</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../pages/lamp.html"
+                  class="block px-4 py-2 hover:text-blue-900"
+                  >Lamp</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:text-blue-900">Bed</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="../pages/blog.html"
+              class="text-amber-900 hover:text-blue-900"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="../pages/contact.html"
+              class="text-amber-900 hover:text-blue-900"
+              >Contact</a
+            >
+          </li>
+
+          <li>
+            <a href="#"
+              ><i
+                class="fa-solid fa-magnifying-glass text-amber-900 hover:text-blue-900"
+              ></i>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><i
+                class="fa-regular fa-user text-amber-900 hover:text-blue-900"
+              ></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-amber-900">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+          ☰
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <ul
+        id="mobile-menu"
+        class="hidden md:hidden bg-blue-700 text-white text-center space-y-2 p-4"
+      >
+        <li>
+          <a href="/team1-Furniture-company/index.html" class="block py-2"
+            >Home</a
+          >
+        </li>
+        <li><a href="../pages/about.html" class="block py-2">About</a></li>
+        <li><a href="../pages/product.html" class="block py-2">Product</a></li>
+        <li><a href="../pages/pages.html" class="block py-2">Pages</a></li>
+        <li class="relative group">
+          <button class="hover:text-blue-900">Category</button>
+          <ul
+            class="absolute left-0 mt-2 w-40 bg-white shadow-md rounded-lg hidden group-hover:block"
+          >
+            <li>
+              <a
+                href="../pages/table-g.html"
+                class="block px-4 py-2 hover:text-blue-900 text-black"
+                >Table</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/sofa-g.html"
+                class="block px-4 py-2 hover:text-blue-900 text-black"
+                >Sofa</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/mirror-g.html"
+                class="block px-4 py-2 hover:text-blue-900 text-black"
+                >Mirror</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/lamp.html"
+                class="block px-4 py-2 hover:text-blue-900 text-black"
+                >Lamp</a
+              >
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:text-blue-900 text-black"
+                >Bed</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li></li>
+        <li><a href="../pages/blog.html" class="block py-2">Blog</a></li>
+        <li><a href="../pages/contact.html" class="block py-2">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+      <div class="bg-amber-900 rounded-xl shadow-lg overflow-hidden mt-6 ms-6">
+        <img
+          src="../images/bed9.jpg"
+          alt="Responsive Image"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="w-[400px] h-[500px] ms-12 mt-6">
+        <h1 class="text-5xl font-bold text-amber-900">Cosy Sofa</h1>
+        <div class="grid grid-cols-2 mt-5">
+          <p class="text-2xl text-decoration: line-through">$ 450</p>
+          <p class="text-2xl left-28">$ 399</p>
+        </div>
+        <p class="text-2xl text-black mt-8">
+          Furniture refers to movable objects intended to support various human
+          activities such as seating, eating, and sleeping. Furniture is also
+          used to hold objects at a convenient height for work, or to store
+          things.
+        </p>
+        <div class="p-6 mt-6">
+          <a
+            class="text-1.5xl bg-amber-900 p-4 rounded-xl ms-0 text-white"
+            href="#"
+            >Add to Cart</a
+          >
+        </div>
+      </div>
+    </div>
+
     <div
-      class="min-h-[10vh] flex flex-col border border-t-2 border-t-amber-600"
+      class="min-h-[10vh] flex flex-col border border-t-2 border-t-amber-600 mt-12"
     >
       <div class="flex-grow bg-gradient-to-br from-gray-50 to-gray-200 p-8">
         <div
@@ -136,5 +341,6 @@
         </div>
       </div>
     </div>
+    <script src="../scripts/menu.js"></script>
   </body>
 </html>

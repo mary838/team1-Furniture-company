@@ -3,15 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Footer section</title>
-    <!-- Add Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>FAQ</title>
     <!-- output -->
     <link rel="stylesheet" href="../styles/output.css" />
     <!-- Tailwind CSS via CDN -->
@@ -20,17 +12,124 @@
     <link rel="stylesheet" href="../styles/animation.css" />
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- appcss -->
-    <link rel="stylesheet" href="../styles/style.css" />
   </head>
-  <body>
-    <!-- footer -->
+  <body class="font-poppins">
+    <!-- FAQ Section -->
+    <section
+      id="faq"
+      class="bg-gray-50 py-12 animate-fadeInUp flex flex-row justify-between items-center"
+    >
+      <div class="container mx-auto px-4" data-aos="slide-right">
+        <h2 class="text-3xl font-semibold text-center mb-8">FAQ</h2>
+
+        <!-- FAQ Items -->
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div
+            class="border border-black rounded-lg overflow-hidden transition-transform hover:translate-x-2"
+          >
+            <button
+              class="w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none"
+              onclick="toggleCollapse('collapse1')"
+            >
+              What materials are used to make this furniture, and how durable
+              are they?
+            </button>
+            <div id="collapse1" class="hidden p-4 bg-gray-100">
+              Our furniture is made from high-quality wood like oak, walnut, and
+              engineered wood, designed for durability and long-lasting use.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div
+            class="border border-black rounded-lg overflow-hidden transition-transform hover:translate-x-2"
+          >
+            <button
+              class="w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none"
+              onclick="toggleCollapse('collapse2')"
+            >
+              What does this furniture require assembly, and if so, is there an
+              instruction manual included?
+            </button>
+            <div id="collapse2" class="hidden p-4 bg-gray-100">
+              Some pieces come pre-assembled, while others require simple
+              assembly. Instructions are included, and video guides are
+              available.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div
+            class="border border-black rounded-lg overflow-hidden transition-transform hover:translate-x-2"
+          >
+            <button
+              class="w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none"
+              onclick="toggleCollapse('collapse3')"
+            >
+              What is your return policy if the furniture doesn’t fit my space
+              or expectations?
+            </button>
+            <div id="collapse3" class="hidden p-4 bg-gray-100">
+              We offer a 30-day return policy for unused items. Return shipping
+              fees may apply. Check our Returns & Refunds page for details.
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div
+            class="border border-black rounded-lg overflow-hidden transition-transform hover:translate-x-2"
+          >
+            <button
+              class="w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none"
+              onclick="toggleCollapse('collapse4')"
+            >
+              Do you offer delivery and installation services, and how much do
+              they cost?
+            </button>
+            <div id="collapse4" class="hidden p-4 bg-gray-100">
+              Yes! Standard delivery is free for orders over $500. White-glove
+              delivery (includes setup) is available for an extra fee at
+              checkout.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form container mx-auto px-4" data-aos="slide-left">
+        <div>
+          <h2 class="text-3xl font-semibold text-center mb-8">Ask Us</h2>
+        </div>
+        <form class="bg-gray-300 p-8 rounded-lg shadow-lg">
+          <input
+            type="text"
+            placeholder="Your name"
+            class="form-input w-full py-4 px-6 rounded-lg border-2 border-gray-100 focus:outline-none bg-gray-100"
+          />
+          <input
+            type="email"
+            placeholder="Your email"
+            class="form-input w-full py-4 px-6 rounded-lg border-2 border-gray-100 focus:outline-none mt-4 bg-gray-100"
+          />
+          <textarea
+            placeholder="Your message"
+            class="form-textarea w-full py-4 px-6 rounded-lg border-2 border-gray-100 focus:outline-none mt-4 bg-gray-100"
+          ></textarea>
+        </form>
+        <div class="flex justify-end items-end">
+          <button
+            class="w-15% py-4 px-6 bg-amber-900 text-white rounded-lg mt-4 hover:bg-amber-800 focus:outline-none"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </section>
     <div
-      class="min-h-[10vh] flex flex-col border border-t-2 border-t-amber-600"
+      class="bg-url('../assets/footer-bg.jpg') bg-cover bg-center min-h-screen flex flex-col"
     >
       <div class="flex-grow bg-gradient-to-br from-gray-50 to-gray-200 p-8">
         <div
-          class="max-w-[85%] w-auto mx-auto my-[5em] flex flex-col md:flex-row justify-between items-start space-y-4 md:space-y-0"
+          class="max-w-6xl mx-auto mt-[7em] flex flex-col md:flex-row justify-between items-start space-y-4 md:space-y-0"
         >
           <!-- Left Section - remains the same -->
           <div class="space-y-4">
@@ -83,11 +182,9 @@
                 class="flex-grow p-2 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500"
               />
               <button
-                class="border border-amber-700 text-white p-2 px-4 hover:bg-amber-800 transition-colors"
+                class="bg-amber-700 text-white p-2 px-4 hover:bg-amber-800 transition-colors"
               >
-                <i
-                  class="fa-regular fa-envelope text-amber-700 hover:text-white"
-                ></i>
+                <i class="fa-solid fa-envelope"></i>
               </button>
             </div>
           </div>
@@ -103,7 +200,7 @@
             ©2025 UrbanWood Designs. All rights reserved.
           </p>
 
-          <div class="flex gap-[1.4em]">
+          <div class="flex space-x-6">
             <a href="#" class="text-gray-600 hover:text-gray-900">
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -136,5 +233,14 @@
         </div>
       </div>
     </div>
+
+    <!-- JavaScript for Collapse Toggle -->
+    <script src="../scripts/app.js"></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

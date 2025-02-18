@@ -108,9 +108,6 @@ class ProgressBar {
 // Initialize all progress bars
 document.querySelectorAll(".progress-bar").forEach((element) => {
   new ProgressBar(element);
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> main
-});
 
+
+});
