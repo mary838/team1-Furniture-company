@@ -11,18 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const hiddenElements = document.querySelectorAll(".scroll-slide");
   hiddenElements.forEach((el) => observer.observe(el));
-=======
-// const menuBtn = document.getElementById("menu-btn");
-// const mobileMenu = document.getElementById("mobile-menu");
-
-=======
-// const menuBtn = document.getElementById("menu-btn");
-// const mobileMenu = document.getElementById("mobile-menu");
-
->>>>>>> main
-// menuBtn.addEventListener("click", () => {
-//   mobileMenu.classList.toggle("hidden");
-// });
 
 class ProgressBar {
   constructor(element) {

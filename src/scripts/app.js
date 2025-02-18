@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // for login form functionality
+  // for logins form functionality
   const userIcon = document.getElementById("userIcon");
   const authModal = document.getElementById("authModal");
   const authBackdrop = document.getElementById("authBackdrop");
