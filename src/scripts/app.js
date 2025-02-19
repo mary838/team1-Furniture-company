@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // for logins form functionality
+  // for login form functionality
   const userIcon = document.getElementById("userIcon");
   const authModal = document.getElementById("authModal");
   const authBackdrop = document.getElementById("authBackdrop");
@@ -202,12 +202,4 @@ megaMenu.addEventListener("mouseenter", () => {
 
 megaMenu.addEventListener("mouseleave", () => {
   megaMenu.classList.remove("active");
-});
-
-// Mobile menu toggle
-const menuBtn = document.getElementById("menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
-
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
 });
