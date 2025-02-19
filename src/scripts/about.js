@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -11,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const hiddenElements = document.querySelectorAll(".scroll-slide");
   hiddenElements.forEach((el) => observer.observe(el));
+});
 
 class ProgressBar {
   constructor(element) {
@@ -24,7 +23,6 @@ class ProgressBar {
   }
 
   init() {
-    // Create HTML structure
     this.element.innerHTML = `
       <div class="mb-4">
         <span class="text-black text-lg font-medium">${this.label}</span>
@@ -38,15 +36,16 @@ class ProgressBar {
       </div>
     `;
 
-    // Observe intersection
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            this.element.classList.add("visible");
             setTimeout(() => {
               this.animateProgress();
             }, this.delay);
           } else {
+            this.element.classList.remove("visible");
             this.resetProgress();
           }
         });
@@ -61,10 +60,9 @@ class ProgressBar {
     const progressBar = this.element.querySelector(".bg-amber-800");
     const percentageDisplay = this.element.querySelector(".bg-amber-600");
 
-    // Animate progress bar
     let start = 0;
-    const duration = 1000; // match progress bar duration
-    const step = 16; // for smooth animation (60fps)
+    const duration = 1000;
+    const step = 16;
     const increment = (this.percentage * step) / duration;
 
     const timer = setInterval(() => {
@@ -83,7 +81,7 @@ class ProgressBar {
   }
 
   resetProgress() {
-    const progressBar = this.element.querySelector(".bg-amber-900");
+    const progressBar = this.element.querySelector(".bg-amber-800");
     const percentageDisplay = this.element.querySelector(".bg-amber-600");
 
     this.width = 0;
@@ -93,9 +91,9 @@ class ProgressBar {
   }
 }
 
-// Initialize all progress bars
-document.querySelectorAll(".progress-bar").forEach((element) => {
-  new ProgressBar(element);
-
-
+// Initialize progress bars when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".progress-bar").forEach((element) => {
+    new ProgressBar(element);
+  });
 });

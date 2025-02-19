@@ -3,37 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
+    <title>FAQ</title>
+    <!-- output -->
+    <link rel="stylesheet" href="../styles/output.css" />
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- fontfamily -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Custom animation CSS -->
+    <link rel="stylesheet" href="../styles/animation.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- icon -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
 
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      body {
-        font-family: "Poppins", sans-serif;
+      .collapse-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background-color: rgb(249 250 251);
+        padding: 0 1rem;
+      }
+
+      .collapse-content.active {
+        max-height: 200px;
+        padding: 1rem;
+      }
+
+      .faq-button::after {
+        content: "+";
+        float: right;
+        transition: transform 0.3s ease;
+      }
+
+      .faq-button.active::after {
+        content: "−";
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .animate-slideIn {
+        animation: slideIn 0.5s ease-out;
       }
     </style>
-    <script src="../scripts/scroll.js"></script>
-    <link rel="stylesheet" href="../styles/product.css" />
   </head>
   <body>
-    <nav class="z-auto bg-white-600 p-0">
-      <div class="px-6 mx-auto flex justify-between items-center bg-gray-200">
-        <a href="#" class="text-white text-2xl font-bold"
-          ><img src="../assets/Logo.png" alt="Logo" class="h-[50px]"
-        /></a>
+    <!-- header -->
+    <nav class="z-auto bg-white-600 p-0 bg-gray-200">
+      <div
+        class="px-6 mx-auto flex justify-between items-center max-w-[98%] w-auto"
+      >
+        <a href="/index.html" class="text-white text-2xl font-bold">
+          <img src="../assets/logo.png" alt="Logo" class="h-[50px] my-2" />
+        </a>
 
         <ul class="hidden md:flex space-x-6">
           <li>
-            <a href="/index.html" class="text-amber-900 hover:text-blue-900"
+            <a
+              class="text-amber-900 hover:text-blue-900"
+              href="/index.html"
+              class="text-amber-900 hover:text-blue-900"
               >Home</a
             >
           </li>
@@ -93,14 +134,15 @@
             </ul>
           </li>
           <li>
-            <a href="#" class="text-amber-900 hover:text-blue-900">Blog</a>
+            <a href="./blog.html" class="text-amber-900 hover:text-blue-900"
+              >Blog</a
+            >
           </li>
           <li>
             <a href="./contact.html" class="text-amber-900 hover:text-blue-900"
               >Contact</a
             >
           </li>
-
           <!-- icon -->
           <li>
             <a href="#" id="search-icon">
@@ -458,96 +500,119 @@
     </div>
   </div>
   </div>
+      </ul>
     </nav>
-    <h2 class="text-4xl font-bold text-amber-900 mt-4">
-      Furniture <span>Blog</span>
-    </h2>
 
-    <div class="grid md:grid-cols-2 items-center px-6 mt-6">
-      <div class="scroll-slide">
-        <img
-          src="../assets/blog 1.jpg"
-          alt="Example Image"
-          class="w-full rounded-lg shadow-lg hover:brightness-75 transition duration-300"
-        />
-      </div>
-
-      <div class="text-center md:text-left px-6 scroll-slide">
-        <h2 class="text-4xl font-bold text-amber-900">Office Lounge</h2>
-        <p class="mt-4 text-lg text-gray-600">5 Feb 2025</p>
-        <p class="mt-4 text-lg text-gray-600">
-          Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec
-          sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta
-          dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor
-          accumsan tincidunt. Sed porttitor lectus nibh. Pellentesque in ipsum
-          id orci porta dapibus. 
-        </p>
-        <a
-          href="../pages/blog-readmore.html"
-          class="mt-6 inline-block px-6 py-3 bg-amber-900 text-white rounded-lg hover:bg-blue-700"
-          >Read More</a
-        >
-      </div>
-    </div>
-
-    <div
-      class="grid md:grid-cols-2 items-hover:brightness-75 transition duration-300center px-6 mt-6"
+    <!-- Main Content -->
+    <section
+      id="faq"
+      class="bg-gray-50 py-12 flex flex-col md:flex-row justify-between items-start gap-8 p-4"
     >
-      <div class="scroll-slide">
-        <img
-          src="../assets/blog-2.jpg"
-          alt="Example Image"
-          class="w-full rounded-lg shadow-lg hover:brightness-75 transition duration-300"
-        />
+      <!-- FAQ Section -->
+      <div class="w-full md:w-1/2 animate-slideIn">
+        <h2 class="text-3xl font-semibold text-center mb-8">FAQ</h2>
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div
+            class="border border-black rounded-lg overflow-hidden transition-all duration-200 hover:translate-x-2"
+          >
+            <button
+              class="faq-button w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none"
+              onclick="toggleCollapse('collapse1', this)"
+            >
+              What materials are used to make this furniture, and how durable
+              are they?
+            </button>
+            <div id="collapse1" class="collapse-content">
+              Our furniture is made from high-quality wood like oak, walnut, and
+              engineered wood, designed for durability and long-lasting use.
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div
+            class="border border-black rounded-lg overflow-hidden transition-all duration-200 hover:translate-x-2"
+          >
+            <button
+              class="faq-button w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none"
+              onclick="toggleCollapse('collapse2', this)"
+            >
+              What does this furniture require assembly, and if so, is there an
+              instruction manual included?
+            </button>
+            <div id="collapse2" class="collapse-content">
+              Some pieces come pre-assembled, while others require simple
+              assembly. Instructions are included, and video guides are
+              available.
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div
+            class="border border-black rounded-lg overflow-hidden transition-all duration-200 hover:translate-x-2"
+          >
+            <button
+              class="faq-button w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none"
+              onclick="toggleCollapse('collapse3', this)"
+            >
+              What is your return policy if the furniture doesn't fit my space
+              or expectations?
+            </button>
+            <div id="collapse3" class="collapse-content">
+              We offer a 30-day return policy for unused items. Return shipping
+              fees may apply. Check our Returns & Refunds page for details.
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div
+            class="border border-black rounded-lg overflow-hidden transition-all duration-200 hover:translate-x-2"
+          >
+            <button
+              class="faq-button w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none"
+              onclick="toggleCollapse('collapse4', this)"
+            >
+              Do you offer delivery and installation services, and how much do
+              they cost?
+            </button>
+            <div id="collapse4" class="collapse-content">
+              Yes! Standard delivery is free for orders over $500. White-glove
+              delivery (includes setup) is available for an extra fee at
+              checkout.
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="text-center md:text-left px-6 scroll-slide">
-        <h2 class="text-4xl font-bold text-amber-900">Much Space</h2>
-        <p class="mt-4 text-lg text-gray-600">5 Feb 2025</p>
-        <p class="mt-4 text-lg text-gray-600">
-          Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec
-          sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta
-          dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor
-          accumsan tincidunt. Sed porttitor lectus nibh. Pellentesque in ipsum
-          id orci porta dapibus. 
-        </p>
-        <a
-          href="../pages/blog-readmore.html"
-          class="mt-6 inline-block px-6 py-3 bg-amber-900 text-white rounded-lg hover:bg-blue-700"
-          >Read More</a
-        >
+      <!-- Contact Form -->
+      <div class="w-full md:w-1/2 animate-slideIn">
+        <h2 class="text-3xl font-semibold text-center mb-8">Ask Us</h2>
+        <form class="bg-gray-300 p-8 rounded-lg shadow-lg">
+          <input
+            type="text"
+            placeholder="Your name"
+            class="w-full py-4 px-6 rounded-lg border-2 border-gray-100 focus:outline-none bg-gray-100 mb-4"
+          />
+          <input
+            type="email"
+            placeholder="Your email"
+            class="w-full py-4 px-6 rounded-lg border-2 border-gray-100 focus:outline-none bg-gray-100 mb-4"
+          />
+          <textarea
+            placeholder="Your message"
+            class="w-full py-4 px-6 rounded-lg border-2 border-gray-100 focus:outline-none bg-gray-100 mb-4 min-h-[8rem]"
+          ></textarea>
+          <div class="flex justify-end">
+            <button
+              type="submit"
+              class="py-4 px-6 bg-amber-900 text-white rounded-lg hover:bg-amber-800 focus:outline-none transition-colors duration-200"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
-    </div>
-
-    <div class="grid md:grid-cols-2 items-center px-6 mt-6">
-      <!-- Left: Image -->
-
-      <div class="scroll-slide">
-        <img
-          src="../assets/blog-3.png"
-          alt="Example Image"
-          class="w-full rounded-lg shadow-lg"
-        />
-      </div>
-
-      <!-- Right: Text Content -->
-      <div class="text-center md:text-left px-6 scroll-slide">
-        <h2 class="text-4xl font-bold text-amber-900">Healthy Bed</h2>
-        <p class="mt-4 text-lg text-gray-600">5 Feb 2025</p>
-        <p class="mt-4 text-lg text-gray-600">
-          Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec
-          sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta
-          dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor
-          accumsan tincidunt. Sed porttitor lectus nibh. Pellentesque in ipsum
-          id orci porta dapibus. 
-        </p>
-        <a
-          href="../pages/blog-readmore.html"
-          class="mt-6 inline-block px-6 py-3 text-white rounded-lg hover:bg-blue-700 bg-amber-900"
-          >Read More</a
-        >
-      </div>
-    </div>
+    </section>
 
     <!-- footer -->
     <div
@@ -564,7 +629,7 @@
               <div class="flex items-center justify-center">
                 <div>
                   <img
-                    src="./src/assets/Logo.png"
+                    src="../assets/logo.png"
                     alt="logo"
                     class="w-[5rem] h-[5rem] cursor-pointer"
                   />
@@ -661,7 +726,16 @@
         </div>
       </div>
     </div>
+
+    <!-- JavaScript for Collapse Toggle -->
+    <script src="../scripts/faq.js"></script>
     <script src="../scripts/menubtn.js"></script>
     <script src="../scripts/app.js"></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
