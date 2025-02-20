@@ -5,17 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About us</title>
     <script src="https://cdn.tailwindcss.com"></script>
-<<<<<<< HEAD
-
-    <script src="../scripts/header.js"></script>
-
+    <link rel="stylesheet" href="../styles/about.css" />
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-=======
-    <!-- aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
->>>>>>> main
     <!-- fontfamily -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
@@ -28,501 +20,828 @@
     />
 
     <style>
-      body {
-        font-family: "Poppins", sans-serif;
+      .number-card {
+          transition: all 0.3s ease;
       }
-    </style>
+      .number-card:hover {
+          transform: translateY(-10px);
+      }
+      .gradient-text {
+          background: linear-gradient(45deg, #8B4513, #D2691E);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+    
+    .floating {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    /* Testimonial styles */
+    .testimonial-wrapper {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .testimonial-container {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 300%;
+    }
+    
+    .testimonial-slide {
+        flex: 0 0 33.333%;
+        padding: 0 20px;
+    }
+  </style>
   </head>
-  <body>
-    <nav class="z-auto bg-white-600 p-0 bg-gray-200">
-      <div class="px-6 mx-auto flex justify-between items-center bg-gray-200">
-        <a href="/index.html" class="text-white text-2xl font-bold">
-          <img src="../assets/Logo.png" alt="Logo" class="h-[50px] my-2" />
-        </a>
+  <body class="overflow-x-hidden">
+   <!-- header -->
+   <nav class="z-auto bg-white-600 p-0 bg-gray-200">
+    <div
+      class="px-6 mx-auto flex justify-between items-center max-w-[98%] w-auto"
+    >
+      <a href="/index.html" class="text-white text-2xl font-bold">
+        <img src="/src/assets/logo.png" alt="Logo" class="h-[50px] my-2" />
+      </a>
 
-        <ul class="hidden md:flex space-x-6">
-          <li>
-<<<<<<< HEAD
-            <a
-              href="/team1-Furniture-company/index.html"
-              class="text-amber-900 hover:text-blue-900"
-=======
-            <a href="./index.html" class="text-amber-900 hover:text-blue-900"
->>>>>>> main
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="./src/pages/about.html"
-              class="text-amber-900 hover:text-blue-900"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              href="../pages/product.html"
-              class="text-amber-900 hover:text-blue-900"
-              >Product</a
-            >
-          </li>
-          <li>
-            <a
-              href="../pages/pages.html"
-              class="text-amber-900 hover:text-blue-900"
-              >Pages</a
-            >
-          </li>
-          <li class="relative group">
-            <button class="text-amber-900 hover:text-blue-900">Category</button>
-            <ul
-              class="z-50 absolute left-0 mt-2 w-40 bg-white shadow-md rounded-lg hidden group-hover:block"
-            >
-              <li>
-                <a
-                  href="../pages/table-g.html"
-                  class="block px-4 py-2 hover:text-blue-900"
-                  >Table</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../pages/sofa-g.html"
-                  class="block px-4 py-2 hover:text-blue-900"
-                  >Sofa</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../pages/blog.html"
-                  class="block px-4 py-2 hover:text-blue-900"
-                  >Mirror</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../pages/lamp.html"
-                  class="block px-4 py-2 hover:text-blue-900"
-                  >Lamp</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../pages/bed.html"
-                  class="block px-4 py-2 hover:text-blue-900"
-                  >Bed</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="../pages/blog.html"
-              class="text-amber-900 hover:text-blue-900"
-              >Blog</a
-            >
-          </li>
-          <li>
-            <a
-              href="../pages/contact.html"
-              class="text-amber-900 hover:text-blue-900"
-              >Contact</a
-            >
-          </li>
-          <li>
-            <a href="#" id="search-icon">
-              <i
-                class="fa-solid fa-magnifying-glass text-amber-900 hover:text-blue-900"
-              ></i>
-            </a>
-          </li>
-          <li>
-            <a href="#"
-              ><i
-                class="fa-regular fa-user text-amber-900 hover:text-blue-900"
-              ></i>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-amber-900">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-          </li>
-        </ul>
-
-        <!-- Mobile Menu Button -->
-        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-          ☰
-        </button>
-      </div>
-
-      <!-- Search Bar -->
-      <div
-        id="search-bar"
-        class="hidden w-full bg-gray-200 p-4 transition-all duration-300 ease-in-out"
-      >
-        <div class="relative">
-          <input
-            type="text"
-            id="search-input"
-            placeholder="Search..."
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
-          />
-          <!-- Search Suggestions -->
-          <div
-            id="search-suggestions"
-            class="absolute w-full bg-white border border-gray-300 rounded-lg mt-2 hidden"
-          >
-            <!-- Suggestions will be dynamically inserted here -->
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile Menu -->
-      <ul
-        id="mobile-menu"
-        class="hidden md:hidden bg-blue-700 text-white text-center space-y-2 p-4"
-      >
-<<<<<<< HEAD
+      <ul class="hidden md:flex space-x-6">
         <li>
-          <a href="/team1-Furniture-company/index.html" class="block py-2"
+          <a
+            class="text-amber-900 hover:text-blue-900"
+            href="/index.html"
+            class="text-amber-900 hover:text-blue-900"
             >Home</a
           >
         </li>
-        <li><a href="#" class="block py-2">About</a></li>
-        <li><a href="../pages/product.html" class="block py-2">Product</a></li>
-        <li><a href="../pages/pages.html" class="block py-2">Pages</a></li>
+        <li>
+          <a
+            href="about.html"
+            class="text-amber-900 hover:text-blue-900"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="product.html"
+            class="text-amber-900 hover:text-blue-900"
+            >Product</a
+          >
+        </li>
+        <li>
+          <a
+            href="page.html"
+            class="text-amber-900 hover:text-blue-900"
+            >Pages</a
+          >
+        </li>
         <li class="relative group">
-          <button class="hover:text-blue-900">Category</button>
+          <button class="text-amber-900 hover:text-blue-900">Category</button>
           <ul
-            class="absolute left-0 mt-2 w-40 bg-white shadow-md rounded-lg hidden group-hover:block"
+            class="z-50 absolute left-0 mt-2 w-40 bg-white shadow-md rounded-lg hidden group-hover:block"
           >
             <li>
               <a
-                href="../pages/table-g.html"
-                class="block px-4 py-2 hover:text-blue-900 text-black"
+                href="table-g.html"
+                class="block px-4 py-2 hover:text-blue-900"
                 >Table</a
               >
             </li>
             <li>
               <a
-                href="../pages/sofa-g.html"
-                class="block px-4 py-2 hover:text-blue-900 text-black"
+                href="sofa-g.html"
+                class="block px-4 py-2 hover:text-blue-900"
                 >Sofa</a
               >
             </li>
             <li>
               <a
-                href="../pages/mirror-g.html"
-                class="block px-4 py-2 hover:text-blue-900 text-black"
+                href="mirror-g.html"
+                class="block px-4 py-2 hover:text-blue-900"
                 >Mirror</a
               >
             </li>
             <li>
               <a
-                href="../pages/lamp.html"
-                class="block px-4 py-2 hover:text-blue-900 text-black"
+                href="lamp.html"
+                class="block px-4 py-2 hover:text-blue-900"
                 >Lamp</a
               >
             </li>
             <li>
               <a
-                href="../pages/bed.html"
-                class="block px-4 py-2 hover:text-blue-900 text-black"
+                href="bed.html"
+                class="block px-4 py-2 hover:text-blue-900"
                 >Bed</a
               >
             </li>
           </ul>
         </li>
-
-        <li></li>
-        <li><a href="../pages/blog.html" class="block py-2">Blog</a></li>
-        <li><a href="../pages/contact.html" class="block py-2">Contact</a></li>
-=======
-        <!-- Your mobile menu items -->
->>>>>>> main
+        <li>
+          <a
+            href="blog.html"
+            class="text-amber-900 hover:text-blue-900"
+            >Blog</a
+          >
+        </li>
+        <li>
+          <a
+            href="contact.html"
+            class="text-amber-900 hover:text-blue-900"
+            >Contact</a
+          >
+        </li>
+        <!-- icon -->
+        <li>
+          <a href="#" id="search-icon">
+            <i
+              class="fa-solid fa-magnifying-glass text-amber-900 hover:text-blue-900 transition-colors duration-300"
+            ></i>
+          </a>
+        </li>
+        <l>
+          <a href="#" id="userIcon">
+            <i
+              class="fa-regular fa-user text-amber-900 hover:text-blue-900 transition-colors duration-300"
+            ></i>
+          </a>
+        </l>
+        <li>
+          <a
+            href="#"
+            class="text-amber-900 hover:text-blue-900 transition-colors duration-300"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </li>
       </ul>
-    </nav>
 
-    <!-- hero section -->
-    <div
-      class="relative flex items-center justify-center min-h-screen bg-cover bg-center"
-      style="
-        background-image: url('https://wallpapers.com/images/hd/beautiful-tan-modern-furniture-1p8lqahjzvgac2vw.jpg');
-      "
+      <!-- Search Modal -->
+      <div id="searchOverlay" class="fixed inset-0 z-50 hidden">
+        <div
+          class="absolute inset-0 bg-black transition-opacity duration-300 opacity-0"
+          id="searchBackdrop"
+        ></div>
+        <div
+          class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl px-4"
+        >
+          <div
+            class="bg-white rounded-lg shadow-2xl p-6 relative transition-all duration-300 transform opacity-0 scale-95"
+            id="searchContainer"
+          >
+            <button
+              id="closeSearch"
+              class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100"
+            >
+              ×
+            </button>
+            <div class="relative">
+              <input
+                type="text"
+                id="searchInput"
+                class="w-full px-4 py-3 text-gray-700 bg-gray-50 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"
+                placeholder="Search..."
+              />
+            </div>
+            <div
+              id="searchSuggestions"
+              class="hidden mt-4 bg-white rounded-lg shadow-lg max-h-64 overflow-y-auto"
+            >
+              <!-- Suggestions will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Auth Modal -->
+      <div id="authModal" class="fixed inset-0 z-50 hidden">
+        <div
+          class="absolute inset-0 bg-black transition-opacity duration-300 opacity-0"
+          id="authBackdrop"
+        ></div>
+        <div
+          class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-sm transition-all duration-300 opacity-0 scale-95"
+          id="authContainer"
+        >
+          <div class="bg-white p-4 rounded-lg shadow-xl w-full">
+            <div class="text-center mb-4">
+              <h1 class="text-[1.6rem] font-bold text-gray-800">
+                Welcome Back
+              </h1>
+              <p class="text-[1rem] text-gray-500 mt-1">
+                Please enter your details
+              </p>
+            </div>
+
+            <div class="flex justify-center space-x-6 mb-4">
+              <button
+                id="loginBtn"
+                class="text-active font-semibold text-amber-700 border-b-2 border-amber-700 pb-1 transition-all duration-300 hover:text-amber-600"
+              >
+                Login
+              </button>
+              <button
+                id="signupBtn"
+                class="text-active font-semibold text-amber-700 pb-1 transition-all duration-300 hover:text-amber-600"
+              >
+                Register
+              </button>
+            </div>
+
+            <div
+              class="relative h-auto transition-all duration-500 ease-in-out overflow-hidden"
+            >
+              <!-- Login Form -->
+              <div
+                id="loginForm"
+                class="w-full transition-transform duration-500 ease-in-out transform translate-x-0 opacity-100"
+              >
+                <form class="space-y-4">
+                  <div>
+                    <label
+                      for="loginEmail"
+                      class="block text-sm font-medium text-gray-700"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="loginEmail"
+                      class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                      required
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="loginPassword"
+                      class="block text-sm font-medium text-gray-700"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      id="loginPassword"
+                      class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                      required
+                      placeholder="Enter your password"
+                    />
+                  </div>
+                  <div class="flex items-center justify-between mb-2">
+                    <label class="flex items-center">
+                      <input
+                        type="checkbox"
+                        class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                      />
+                      <span class="ml-2 text-sm text-gray-600"
+                        >Remember me</span
+                      >
+                    </label>
+                    <a
+                      href="#"
+                      class="text-sm text-blue-600 hover:text-blue-800 transition-colors duration-300 underline underline-offset-4"
+                      >Forgot password?</a
+                    >
+                  </div>
+                  <button
+                    type="submit"
+                    class="w-full bg-amber-700 text-white py-2 rounded-lg font-semibold hover:bg-amber-800 transition"
+                  >
+                    Login
+                  </button>
+                </form>
+              </div>
+
+              <!-- Signup Form -->
+              <div
+                id="signupForm"
+                class="absolute w-full transition-transform duration-500 ease-in-out transform translate-x-full opacity-0"
+              >
+                <form class="space-y-4">
+                  <div>
+                    <label
+                      for="signupName"
+                      class="block text-sm font-medium text-gray-700"
+                      >Full Name</label
+                    >
+                    <input
+                      type="text"
+                      id="signupName"
+                      class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                      required
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="signupEmail"
+                      class="block text-sm font-medium text-gray-700"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="signupEmail"
+                      class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                      required
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="signupPassword"
+                      class="block text-sm font-medium text-gray-700"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      id="signupPassword"
+                      class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                      required
+                      placeholder="Create a password"
+                    />
+                  </div>
+                  <div class="flex items-center mb-2">
+                    <input
+                      type="checkbox"
+                      class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    />
+                    <span class="ml-2 text-sm text-gray-600"
+                      >I agree to the Terms and Privacy Policy</span
+                    >
+                  </div>
+                  <button
+                    type="submit"
+                    class="w-full bg-amber-700 text-white py-2 rounded-lg font-semibold hover:bg-amber-800 transition"
+                  >
+                    Create Account
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="mt-4 text-center">
+              <p class="text-sm text-gray-500 mb-3">Or continue with</p>
+              <div class="flex justify-center space-x-4">
+                <button
+                  class="p-2 border rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                      fill="#4285F4"
+                    />
+                    <path
+                      d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                      fill="#34A853"
+                    />
+                    <path
+                      d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                      fill="#FBBC05"
+                    />
+                    <path
+                      d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                      fill="#EA4335"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="p-2 border rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="p-2 border rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Mobile Menu Button -->
+<button id="menu-btn" class="md:hidden fixed right-4 top-4 z-50 p-2 text-2xl text-amber-900 hover:text-blue-900 focus:outline-none">
+☰
+</button>
+
+<!-- Mobile Menu Overlay -->
+<div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed top-0 right-[-100%] w-[300px] h-full bg-white z-50 transition-all duration-300 ease-in-out md:hidden overflow-y-auto">
+<div class="p-6 space-y-6">
+  <!-- Logo -->
+  <div class="flex justify-center mb-8">
+    <img src="../assets/logo.png" alt="Logo" class="h-[40px]" />
+  </div>
+
+  <!-- Main Navigation -->
+  <ul class="space-y-4">
+    <li>
+      <a href="/index.html" class="block text-amber-900 hover:text-blue-900 py-2">Home</a>
+    </li>
+    <li>
+      <a href="about.html" class="block text-amber-900 hover:text-blue-900 py-2">About</a>
+    </li>
+    <li>
+      <a href="product.html" class="block text-amber-900 hover:text-blue-900 py-2">Product</a>
+    </li>
+    <li>
+      <a href="page.html" class="block text-amber-900 hover:text-blue-900 py-2">Pages</a>
+    </li>
+    
+    <!-- Category Dropdown -->
+    <li class="relative">
+      <button id="mobile-category-btn" class="flex items-center justify-between w-full text-amber-900 hover:text-blue-900 py-2">
+        Category
+        <i class="fa-solid fa-chevron-down text-sm"></i>
+      </button>
+      <ul id="mobile-category-dropdown" class="hidden pl-4 space-y-2 mt-2">
+        <li><a href="../pages/table-g.html" class="block text-amber-900 hover:text-blue-900 py-2">Table</a></li>
+        <li><a href="../pages/sofa-g.html" class="block text-amber-900 hover:text-blue-900 py-2">Sofa</a></li>
+        <li><a href="../pages/blog.html" class="block text-amber-900 hover:text-blue-900 py-2">Mirror</a></li>
+        <li><a href="../pages/lamp.html" class="block text-amber-900 hover:text-blue-900 py-2">Lamp</a></li>
+        <li><a href="../pages/bed.html" class="block text-amber-900 hover:text-blue-900 py-2">Bed</a></li>
+      </ul>
+    </li>
+    
+    <li>
+      <a href="blog.html" class="block text-amber-900 hover:text-blue-900 py-2">Blog</a>
+    </li>
+    <li>
+      <a href="contact.html" class="block text-amber-900 hover:text-blue-900 py-2">Contact</a>
+    </li>
+  </ul>
+
+  <!-- Icons Section -->
+  <div class="flex justify-center space-x-6 pt-4 border-t">
+    <a href="#" class="text-amber-900 hover:text-blue-900 text-xl">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </a>
+    <a href="#" class="text-amber-900 hover:text-blue-900 text-xl">
+      <i class="fa-regular fa-user"></i>
+    </a>
+    <a href="#" class="text-amber-900 hover:text-blue-900 text-xl">
+      <i class="fa-solid fa-cart-shopping"></i>
+    </a>
+  </div>
+</div>
+</div>
+  </nav>
+<!-- Hero Section -->
+<section class="relative flex items-center justify-center min-h-screen bg-cover bg-center " style="background-image: url('https://wallpapers.com/images/hd/beautiful-tan-modern-furniture-1p8lqahjzvgac2vw.jpg');">
+  <!-- Gradient overlay for better text readability -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40 backdrop-blur-sm"></div>
+
+  <!-- Content Container -->
+  <div class="text-center relative z-10 p-12 backdrop-blur-sm bg-white/5 border border-white/20 rounded-2xl shadow-2xl max-w-2xl mx-4 transform hover:scale-[1.02] transition-all duration-300">
+    <h1 
+      data-aos="fade-down" 
+      data-aos-duration="1000"
+      class="text-5xl font-bold text-amber-700 mb-4 tracking-tight"
     >
-      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-      <!-- Dark overlay -->
+      About Us
+    </h1>
+    
+    <h2 
+      data-aos="fade-up" 
+      data-aos-duration="1000"
+      data-aos-delay="100"
+      class="text-3xl font-bold text-white mb-6"
+    >
+      Who we are?
+    </h2>
+    
+    <p 
+      data-aos="fade-up" 
+      data-aos-duration="1000"
+      data-aos-delay="200"
+      class="text-lg text-gray-200 leading-relaxed"
+    >
+      Furniture can be a product of design and is considered a form of decorative art. 
+      In addition to furniture's functional role, it can serve a symbolic or religious purpose.
+    </p>
+    
+    <!-- Optional decorative elements -->
+    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-amber-500/30 rounded-tl-2xl"></div>
+    <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-amber-500/30 rounded-br-2xl"></div>
+  </div>
+</section>
 
-      <div
-        class="p-8 bg-gray/2 border border-white/30 rounded-lg shadow-lg max-w-lg text-center"
-      >
-        <h1 data-aos="fade-down" class="text-5xl font-bold text-amber-700">
-          About Us
-        </h1>
-        <h2 data-aos="fade-up" class="text-3xl font-bold text-white">
-          Who we are ?
-        </h2>
-        <p data-aos="fade-up" data-aos-delay="200" class="mt-4 text-white">
-          Furniture can be a product of design and is considered a form of
-          decorative art. In addition to furniture's functional role, it can
-          serve a symbolic or religious purpose.
-        </p>
+<!-- About Content Section -->
+<section class="py-24 px-6 bg-gray-50">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <!-- Left: Image -->
+    <div 
+      data-aos="fade-right" 
+      data-aos-duration="1000"
+      class="md:w-1/2 relative group"
+    >
+      <div class="absolute inset-0 bg-amber-900/10 rounded-2xl transform group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300"></div>
+      
+      <img
+        src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/img4.jpg"
+        alt="Modern Furniture Showcase"
+        class="w-full rounded-2xl shadow-xl relative transform group-hover:-translate-x-3 group-hover:-translate-y-3 transition-transform duration-300"
+      />
+      
+      <!-- Optional decorative elements -->
+      <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-amber-900/20 rounded-tl-2xl"></div>
+    </div>
+
+    <!-- Right: Text Content -->
+    <div data-aos="fade-left" class="lg:w-1/2 w-full text-center lg:text-left px-4 md:px-6">
+      <p class="text-lg text-black">WHO WE ARE ?</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-amber-700">About Us</h2>
+      <p class="mt-4 text-base md:text-lg text-black">
+        Furniture can be a product of design and is considered a form of decorative art. In addition to furniture's functional role, it can serve a symbolic or religious purpose. It can be made from many materials, including metal, plastic, and wood. Furniture can be made using a variety of woodworking joints which often reflect the local culture.
+      </p>
+  
+      <p class="mt-4 text-base md:text-lg text-black">
+        Early furniture from this period is known from artwork such as a Venus figurine found in Russia, depicting the goddess on a throne. The first surviving extant furniture is in the homes of Skara Brae in Scotland, and includes cupboards, dressers, and beds all constructed from stone. Complex construction techniques such as joinery began in the early dynastic period of ancient Egypt.
+      </p>
+  
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg mx-auto lg:max-w-none mt-6">
+        <!-- Feature Items -->
+        <div class="flex items-center space-x-4" data-aos="zoom-in-up" data-aos-delay="200">
+          <div class="flex items-center justify-center w-10 h-10 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer">
+            <svg class="text-white w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="text-black font-bold">GOOD WOOD</span>
+        </div>
+        
+        <div class="flex items-center space-x-4" data-aos="zoom-in-up" data-aos-delay="200">
+          <div class="flex items-center justify-center w-10 h-10 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer">
+            <svg class="text-white w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="text-black font-bold">NATURAL MATERIALS</span>
+        </div>
+        
+        <div class="flex items-center space-x-4" data-aos="zoom-in-up" data-aos-delay="300">
+          <div class="flex items-center justify-center w-10 h-10 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer">
+            <svg class="text-white w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="text-black font-bold">BEST FABRICS</span>
+        </div>
+        
+        <div class="flex items-center space-x-4" data-aos="zoom-in-up" data-aos-delay="300">
+          <div class="flex items-center justify-center w-10 h-10 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer">
+            <svg class="text-white w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="text-black font-bold">FREE SHIPPING</span>
+        </div>
+
+        <div class="flex items-center space-x-4" data-aos="zoom-in-up" data-aos-delay="300">
+          <div class="flex items-center justify-center w-10 h-10 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer">
+            <svg class="text-white w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="text-black font-bold">15 DAYS REFUND</span>
+        </div>
+
+        <div class="flex items-center space-x-4" data-aos="zoom-in-up" data-aos-delay="300">
+          <div class="flex items-center justify-center w-10 h-10 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer">
+            <svg class="text-white w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="text-black font-bold">FRIENDLY SUPPORT</span>
+        </div>
       </div>
     </div>
-    <div
-      class="flex flex-col md:flex-row items-center min-h-screen px-6 max-w-7xl mx-auto p-8"
-    >
-      <!-- Left: Image -->
-      <div data-aos="fade-right" class="md:w-1/2">
+  </div>
+  </div>
+</section>
+
+      
+    
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <!-- Left Side - Content -->
+      <div>
+        <div class="mb-12">
+          <h2 class="text-black mb-2">What we've done?</h2>
+          <h1 class="text-4xl font-bold mb-6 text-black">
+            Our <span class="text-amber-700">History</span>
+          </h1>
+          <p class="text-black leading-relaxed">
+            People have been using natural objects, such as tree stumps, rocks and moss, as furniture since the beginning of human civilization. Archaeological research shows that from around 30,000 years ago, people began constructing and carving their own furniture, using wood, stone, and animal bones.
+          </p>
+        </div>
+
+        <!-- Metrics -->
+        <div class="space-y-6">
+          <div class="progress-bar" data-label="Clients Satisfaction" data-percentage="97" data-delay="100"></div>
+          <div class="progress-bar" data-label="Furniture Repairment" data-percentage="94" data-delay="300"></div>
+          <div class="progress-bar" data-label="Diamond Certificates" data-percentage="92" data-delay="500"></div>
+        </div>
+      </div>
+
+      <!-- Right Side - Image -->
+      <div 
+        data-aos="fade-left" 
+        data-aos-duration="1000"
+        class="relative group"
+      >
+        <!-- Background Shape -->
+        <div class="absolute inset-0 bg-amber-900/10 rounded-2xl transform group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300"></div>
+        
+        <!-- Main Image -->
         <img
-          src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/img4.jpg"
-          alt="Example Image"
-          class="w-full rounded-lg shadow-lg"
+          src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/img3.jpg"
+          alt="Modern Furniture Showcase"
+          class="w-full rounded-2xl shadow-xl relative transform group-hover:-translate-x-3 group-hover:-translate-y-3 transition-transform duration-300"
         />
-      </div>
-
-      <!-- Right: Text Content -->
-      <div
-        data-aos="fade-left"
-        class="md:w-1/2 text-center md:text-left px-6 mb-5"
-      >
-        <p class="text-lg text-black">WHO WE ARE ?</p>
-        <h2 class="text-4xl font-extrabold text-amber-700">About Us</h2>
-        <p class="mt-4 text-lg text-black">
-          Furniture can be a product of design and is considered a form of
-          decorative art. In addition to furniture's functional role, it can
-          serve a symbolic or religious purpose. It can be made from many
-          materials, including metal, plastic, and wood. Furniture can be made
-          using a variety of woodworking joints which often reflect the local
-          culture.
-        </p>
-
-        <p class="mt-4 text-lg text-black">
-          Early furniture from this period is known from artwork such as a Venus
-          figurine found in Russia, depicting the goddess on a throne. The first
-          surviving extant furniture is in the homes of Skara Brae in Scotland,
-          and includes cupboards, dressers and beds all constructed from stone.
-          Complex construction techniques such as joinery began in the early
-          dynastic period of ancient Egypt. This era saw constructed wooden.
-        </p>
-        <div class="grid grid-cols-2 gap-6 max-w-2xl mx-auto mt-5">
-          <!-- Feature 1 -->
-          <div
-            data-aos="zoom-in-up"
-            data-aos-delay="200"
-            class="flex items-center space-x-4"
-          >
-            <div
-              class="flex items-center justify-center w-8 h-8 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer"
-            >
-              <svg
-                class="text-white w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </div>
-            <span class="text-black font-bold">GOOD WOOD</span>
-          </div>
-
-          <!-- Feature 2 -->
-          <div
-            data-aos="zoom-in-up"
-            data-aos-delay="200"
-            class="flex items-center space-x-4"
-          >
-            <div
-              class="flex items-center justify-center w-8 h-8 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer"
-            >
-              <svg
-                class="text-white w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </div>
-            <span class="text-black font-bold">NATURAL MATERIALS</span>
-          </div>
-
-          <!-- Feature 3 -->
-          <div
-            data-aos="zoom-in-up"
-            data-aos-delay="300"
-            class="flex items-center space-x-4"
-          >
-            <div
-              class="flex items-center justify-center w-8 h-8 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer"
-            >
-              <svg
-                class="text-white w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </div>
-            <span class="text-black font-bold">BEST FABRICS</span>
-          </div>
-
-          <!-- Feature 4 -->
-          <div
-            data-aos="zoom-in-up"
-            data-aos-delay="300"
-            class="flex items-center space-x-4"
-          >
-            <div
-              class="flex items-center justify-center w-8 h-8 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer"
-            >
-              <svg
-                class="text-white w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </div>
-            <span class="text-black font-bold">FREE SHIPPING</span>
-          </div>
-
-          <!-- Feature 5 -->
-          <div
-            data-aos="zoom-in-up"
-            data-aos-delay="400"
-            class="flex items-center space-x-4"
-          >
-            <div
-              class="flex items-center justify-center w-8 h-8 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer"
-            >
-              <svg
-                class="text-white w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </div>
-            <span class="text-black font-bold">15 DAYS REFUND</span>
-          </div>
-
-          <!-- Feature 6 -->
-          <div
-            data-aos="zoom-in-up"
-            data-aos-delay="400"
-            class="flex items-center space-x-4"
-          >
-            <div
-              class="flex items-center justify-center w-8 h-8 bg-amber-700 rounded-full hover:bg-amber-800 cursor-pointer"
-            >
-              <svg
-                class="text-white w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </div>
-            <span class="text-black font-bold">FRIENDLY SUPPORT</span>
-          </div>
-        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-amber-900/20 rounded-tl-2xl"></div>
+        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-amber-900/20 rounded-br-2xl"></div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="max-w-7xl mx-auto p-8">
-      <div class="grid md:grid-cols-2 gap-12">
-        <!-- left side - Content -->
-        <div data-aos="fade-right">
-          <div class="mb-12">
-            <h2 class="text-black mb-2">What we've done?</h2>
-            <h1 class="text-4xl font-bold mb-6 tetx-black">
-              Our <span class="text-amber-700">History</span>
-            </h1>
-            <p class="text-black leading-relaxed">
-              People have been using natural objects, such as tree stumps, rocks
-              and moss, as furniture since the beginning of human civilization.
-              Archaeological research shows that from around 30,000 years ago,
-              people began constructing and carving their own furniture, using
-              wood, stone, and animal bones.
-            </p>
-          </div>
+    <!-- Numbers Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100" id="numbersSection">
+      <div class="container mx-auto px-6 md:px-12 lg:px-16">
+          <h2 data-aos="fade-down" class="text-center text-4xl md:text-5xl font-bold mb-12 md:mb-20">
+              <span  class="text-black" >Our </span>
+              <span class="gradient-text">Numbers</span>
+          </h2>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+              <!-- Experience Card -->
+              <div class="number-card bg-white rounded-2xl shadow-xl p-8 md:p-10 text-center transform hover:shadow-2xl relative overflow-hidden group">
+                  <div class="absolute inset-0 bg-gradient-to-br from-yellow-50 to-yellow-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div class="relative z-10">
+                      <div class="text-5xl md:text-7xl font-bold gradient-text mb-4 md:mb-6">
+                          <span data-target="27">0</span><span class="font-bold">+</span>
+                      </div>
+                      <div class="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white px-6 md:px-8 py-2 md:py-3 rounded-full inline-block font-semibold shadow-lg transform hover:scale-105 transition-transform duration-200">
+                          Years of experience
+                      </div>
+                  </div>
+              </div>
 
-          <!-- Metrics -->
-          <div class="space-y-6">
-            <div
-              class="progress-bar"
-              data-label="Clients Satisfaction"
-              data-percentage="97"
-              data-delay="100"
-              data-aos="zoom-in-up"
-              data-aos-delay="200"
-            ></div>
-            <div
-              class="progress-bar"
-              data-label="Furniture Repairment"
-              data-percentage="94"
-              data-delay="300"
-              data-aos="zoom-in-up"
-              data-aos-delay="300"
-            ></div>
-            <div
-              class="progress-bar"
-              data-label="Diamond Certificates"
-              data-percentage="92"
-              data-delay="500"
-              data-aos="zoom-in-up"
-              data-aos-delay="400"
-            ></div>
+              <!-- Happy Clients -->
+              <div class="number-card bg-white rounded-2xl shadow-xl p-8 md:p-10 text-center transform hover:shadow-2xl relative overflow-hidden group">
+                  <div class="absolute inset-0 bg-gradient-to-br from-yellow-50 to-yellow-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div class="relative z-10">
+                      <div class="text-5xl md:text-7xl font-bold gradient-text mb-4 md:mb-6">
+                          <span data-target="35">0</span><span class="font-bold">+</span>
+                      </div>
+                      <div class="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white px-6 md:px-8 py-2 md:py-3 rounded-full inline-block font-semibold shadow-lg transform hover:scale-105 transition-transform duration-200">
+                          Happy Clients
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Global Awards -->
+              <div class="number-card bg-white rounded-2xl shadow-xl p-8 md:p-10 text-center transform hover:shadow-2xl relative overflow-hidden group">
+                  <div class="absolute inset-0 bg-gradient-to-br from-yellow-50 to-yellow-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div class="relative z-10">
+                      <div class="text-5xl md:text-7xl font-bold gradient-text mb-4 md:mb-6">
+                          <span data-target="46">0</span><span class="font-bold">+</span>
+                      </div>
+                      <div class="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white px-6 md:px-8 py-2 md:py-3 rounded-full inline-block font-semibold shadow-lg transform hover:scale-105 transition-transform duration-200">
+                          Global Awards
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Worldwide Showroom -->
+              <div class="number-card bg-white rounded-2xl shadow-xl p-8 md:p-10 text-center transform hover:shadow-2xl relative overflow-hidden group">
+                  <div class="absolute inset-0 bg-gradient-to-br from-yellow-50 to-yellow-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div class="relative z-10">
+                      <div class="text-5xl md:text-7xl font-bold gradient-text mb-4 md:mb-6">
+                          <span data-target="17">0</span><span class="font-bold">+</span>
+                      </div>
+                      <div class="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white px-6 md:px-8 py-2 md:py-3 rounded-full inline-block font-semibold shadow-lg transform hover:scale-105 transition-transform duration-200">
+                          Worldwide Showroom
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <!-- right side - Image and Video Button -->
-        <div data-aos="fade-left" class="relative">
-          <img
-            src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/img3.jpg"
-            alt="Interior space"
-            class="w-full rounded-lg shadow-lg"
-          />
-        </div>
       </div>
+  </section>
+
+    
+<!-- Testimonials Section -->
+<section class="py-20">
+  <div class="text-center mb-16">
+      <p data-aos="fade-down" class="text-sm uppercase tracking-wider mb-2 text-yellow-600 font-semibold">WHAT OUR CLIENT SAY?</p>
+      <h2 data-aos="fade-down" data-aos-delay="200" class="text-4xl font-bold gradient-text">Testimonials</h2>
+  </div>
+  
+  <div class="container mx-auto px-4 relative">
+      <div class="testimonial-slider max-w-2xl mx-auto">
+          <div id="testimonialContainer" class="testimonial-container">
+              <!-- Testimonial 1 -->
+              <div class="testimonial-slide active">
+                  <div class="text-center">
+                      <div data-aos="zoom-in" class="w-32 h-32 mx-auto mb-8 relative">
+                          <div class="absolute inset-0 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full transform -rotate-6"></div>
+                          <img src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/08/t12.jpg" alt="Testimonial 1" class="rounded-full w-full h-full object-cover border-4 border-white relative z-10 transform rotate-6"/>
+                      </div>
+                      <h3 data-aos="fade-up" class="font-semibold text-lg text-amber-700">John Doe</h3>
+                      <p data-aos="fade-up" data-aos-delay="200" class="text-gray-600 mb-2">Businessman</p>
+                      <p  data-aos="fade-up" data-aos-delay="300" class="text-xl mb-8 text-gray-700 italic">
+                          "People have been using natural objects, such as tree stumps, rocks and moss, as furniture since the beginning of human civilization."
+                      </p>
+                      
+                  </div>
+              </div>
+
+              
+          </div>
+
+          <!-- Navigation Buttons -->
+          <button id="prevBtn" class="absolute left-0 top-1/3 -translate-y-1/2 bg-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-yellow-600 hover:text-yellow-700 z-10">
+              ←
+          </button>
+          <button id="nextBtn" class="absolute right-0 top-1/3 -translate-y-1/2 bg-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-yellow-600 hover:text-yellow-700 z-10">
+              →
+          </button>
+      </div>
+  </div>
+</section>
+
+<!-- Brand Partner Section -->
+<section class="py-12 bg-gray-100">
+  <div class="container mx-auto px-4">
+    <!-- Heading -->
+    <div class="text-center mb-8">
+      <p data-aos="fade-down" data-aos-delay="200"  class="text-sm uppercase tracking-wider text-amber-700 font-semibold mb-2">Brand</p>
+      <h2 data-aos="fade-down"  class="text-3xl md:text-4xl font-bold text-amber-700">Our Partners</h2>
     </div>
 
+    <!-- Brand Logos -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-8 items-center justify-center">
+      <!-- Brand Logo 1 -->
+      <div data-aos="fade-up" 
+       class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <img src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/l5.png" alt="Brand 1" class="w-full h-auto object-contain">
+      </div>
+
+      <!-- Brand Logo 2 -->
+      <div data-aos="fade-up" data-aos-delay="200" class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <img src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/l4.png" alt="Brand 2" class="w-full h-auto object-contain">
+      </div>
+
+      <!-- Brand Logo 3 -->
+      <div data-aos="fade-up" data-aos-delay="300" class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <img src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/l3.png" alt="Brand 3" class="w-full h-auto object-contain">
+      </div>
+
+      <!-- Brand Logo 4 -->
+      <div data-aos="fade-up" data-aos-delay="400" class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <img src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/l2.png" alt="Brand 4" class="w-full h-auto object-contain">
+      </div>
+
+      <!-- Brand Logo 5 -->
+      <div data-aos="fade-up" data-aos-delay="500" class="p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <img src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2019/09/l1.png" alt="Brand 5" class="w-full h-auto object-contain">
+      </div>
+    </div>
+  </div>
+</section>
     <!-- footer -->
     <div
       class="min-h-[10vh] flex flex-col border border-t-2 border-t-amber-600"
@@ -538,11 +857,7 @@
               <div class="flex items-center justify-center">
                 <div>
                   <img
-<<<<<<< HEAD
-                    src="../assets/Logo.png"
-=======
-                    src="./src/assets/Logo.png"
->>>>>>> main
+                    src="../assets/logo.png"
                     alt="logo"
                     class="w-[5rem] h-[5rem] cursor-pointer"
                   />
@@ -583,7 +898,7 @@
               <input
                 type="email"
                 placeholder="Email..."
-                class="flex-grow p-2 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                class="flex-grow p-2 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 placeholder-gray-500 placeholder-font-extrabold"
               />
               <button
                 class="border border-amber-700 text-white p-2 px-4 hover:bg-amber-800 transition-colors"
@@ -606,7 +921,7 @@
             ©2025 UrbanWood Designs. All rights reserved.
           </p>
 
-          <div class="flex space-x-6">
+          <div class="flex gap-[1.4em]">
             <a href="#" class="text-gray-600 hover:text-gray-900">
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -640,14 +955,13 @@
       </div>
     </div>
 
-<<<<<<< HEAD
-    <script src="../scripts/menu.js"></script>
-=======
     <script src="../scripts/about.js"></script>
->>>>>>> main
+
 
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../scripts/aos.js"></script>
+    <script src="../scripts/menubtn.js"></script>
+    <script src="../scripts/app.js"></script>
   </body>
 </html>

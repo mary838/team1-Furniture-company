@@ -3,28 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table</title>
+    <title>FAQ</title>
+    <!-- output -->
+    <link rel="stylesheet" href="../styles/output.css" />
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- fontfamily -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Custom animation CSS -->
+    <link rel="stylesheet" href="../styles/animation.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- icon -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <!-- aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      body {
-        font-family: "Poppins", sans-serif;
+      .collapse-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background-color: rgb(249 250 251);
+        padding: 0 1rem;
+      }
+
+      .collapse-content.active {
+        max-height: 200px;
+        padding: 1rem;
+      }
+
+      .faq-button::after {
+        content: "+";
+        float: right;
+        transition: transform 0.3s ease;
+      }
+
+      .faq-button.active::after {
+        content: "−";
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .animate-slideIn {
+        animation: slideIn 0.5s ease-out;
       }
     </style>
-    <script src="../scripts/scroll.js"></script>
-    <link rel="stylesheet" href="../styles/product.css" />
   </head>
   <body>
     <!-- header -->
@@ -46,17 +79,17 @@
             >
           </li>
           <li>
-            <a href="about.html" class="text-amber-900 hover:text-blue-900"
+            <a href="./about.html" class="text-amber-900 hover:text-blue-900"
               >About</a
             >
           </li>
           <li>
-            <a href="product.html" class="text-amber-900 hover:text-blue-900"
+            <a href="./product.html" class="text-amber-900 hover:text-blue-900"
               >Product</a
             >
           </li>
           <li>
-            <a href="pages.html" class="text-amber-900 hover:text-blue-900"
+            <a href="./page.html" class="text-amber-900 hover:text-blue-900"
               >Pages</a
             >
           </li>
@@ -67,42 +100,46 @@
             >
               <li>
                 <a
-                  href="table-g.html"
+                  href="./table-g.html"
                   class="block px-4 py-2 hover:text-blue-900"
                   >Table</a
                 >
               </li>
               <li>
                 <a
-                  href="sofa-g.html"
+                  href="./sofa-g.html"
                   class="block px-4 py-2 hover:text-blue-900"
                   >Sofa</a
                 >
               </li>
               <li>
-                <a href="blog.html" class="block px-4 py-2 hover:text-blue-900"
+                <a
+                  href="./mirror-g.html"
+                  class="block px-4 py-2 hover:text-blue-900"
                   >Mirror</a
                 >
               </li>
               <li>
-                <a href="lamp.html" class="block px-4 py-2 hover:text-blue-900"
+                <a
+                  href="./lamp.html"
+                  class="block px-4 py-2 hover:text-blue-900"
                   >Lamp</a
                 >
               </li>
               <li>
-                <a href="bed.html" class="block px-4 py-2 hover:text-blue-900"
+                <a href="./bed.html" class="block px-4 py-2 hover:text-blue-900"
                   >Bed</a
                 >
               </li>
             </ul>
           </li>
           <li>
-            <a href="blog.html" class="text-amber-900 hover:text-blue-900"
+            <a href="./blog.html" class="text-amber-900 hover:text-blue-900"
               >Blog</a
             >
           </li>
           <li>
-            <a href="contact.html" class="text-amber-900 hover:text-blue-900"
+            <a href="./contact.html" class="text-amber-900 hover:text-blue-900"
               >Contact</a
             >
           </li>
@@ -396,142 +433,191 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-          ☰
+<button id="menu-btn" class="md:hidden fixed right-4 top-4 z-50 p-2 text-2xl text-amber-900 hover:text-blue-900 focus:outline-none">
+  ☰
+  </button>
+  
+  <!-- Mobile Menu Overlay -->
+  <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-0 right-[-100%] w-[300px] h-full bg-white z-50 transition-all duration-300 ease-in-out md:hidden overflow-y-auto">
+  <div class="p-6 space-y-6">
+    <!-- Logo -->
+    <div class="flex justify-center mb-8">
+      <img src="../assets/logo.png" alt="Logo" class="h-[40px]" />
+    </div>
+  
+    <!-- Main Navigation -->
+    <ul class="space-y-4">
+      <li>
+        <a href="/index.html" class="block text-amber-900 hover:text-blue-900 py-2">Home</a>
+      </li>
+      <li>
+        <a href="about.html" class="block text-amber-900 hover:text-blue-900 py-2">About</a>
+      </li>
+      <li>
+        <a href="product.html" class="block text-amber-900 hover:text-blue-900 py-2">Product</a>
+      </li>
+      <li>
+        <a href="page.html" class="block text-amber-900 hover:text-blue-900 py-2">Pages</a>
+      </li>
+      
+      <!-- Category Dropdown -->
+      <li class="relative">
+        <button id="mobile-category-btn" class="flex items-center justify-between w-full text-amber-900 hover:text-blue-900 py-2">
+          Category
+          <i class="fa-solid fa-chevron-down text-sm"></i>
         </button>
-      </div>
-
-      <!-- Mobile Menu -->
-      <ul
-        id="mobile-menu"
-        class="hidden md:hidden bg-blue-700 text-white text-center space-y-2 p-4"
-      >
-        <!-- Your mobile menu items -->
+        <ul id="mobile-category-dropdown" class="hidden pl-4 space-y-2 mt-2">
+          <li><a href="../pages/table-g.html" class="block text-amber-900 hover:text-blue-900 py-2">Table</a></li>
+          <li><a href="../pages/sofa-g.html" class="block text-amber-900 hover:text-blue-900 py-2">Sofa</a></li>
+          <li><a href="../pages/blog.html" class="block text-amber-900 hover:text-blue-900 py-2">Mirror</a></li>
+          <li><a href="../pages/lamp.html" class="block text-amber-900 hover:text-blue-900 py-2">Lamp</a></li>
+          <li><a href="../pages/bed.html" class="block text-amber-900 hover:text-blue-900 py-2">Bed</a></li>
+        </ul>
+      </li>
+      
+      <li>
+        <a href="blog.html" class="block text-amber-900 hover:text-blue-900 py-2">Blog</a>
+      </li>
+      <li>
+        <a href="contact.html" class="block text-amber-900 hover:text-blue-900 py-2">Contact</a>
+      </li>
+    </ul>
+  
+    <!-- Icons Section -->
+    <div class="flex justify-center space-x-6 pt-4 border-t">
+      <a href="#" class="text-amber-900 hover:text-blue-900 text-xl">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </a>
+      <a href="#" class="text-amber-900 hover:text-blue-900 text-xl">
+        <i class="fa-regular fa-user"></i>
+      </a>
+      <a href="#" class="text-amber-900 hover:text-blue-900 text-xl">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+    </div>
+  </div>
+  </div>
       </ul>
     </nav>
-    <!-- content section -->
-    <section
-      class="flex items-center justify-center flex-col py-12 px-4 sm:px-6 lg:px-8"
-    >
-      <!-- Heading -->
-      <div class="text-center w-full mb-12">
-        <h1
-          data-aos="fade-down"
-          class="text-4xl sm:text-5xl font-bold text-gray-900"
-        >
-          <span data-aos="fade-down" data-aos-delay="200" class="text-amber-900"
-            >Table collection</span
-          >
-        </h1>
-      </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-12">
-        <script>
-          const tables = [
-            {
-              name: "Occasional Table",
-              oldPrice: 430,
-              newPrice: 310,
-              img: "table1.jpg",
-            },
-            {
-              name: "Chair Side Table",
-              oldPrice: 415,
-              newPrice: 305,
-              img: "table2.jpg",
-            },
-            {
-              name: "Fabric Table",
-              oldPrice: 715,
-              newPrice: 699,
-              img: "table3.jpg",
-            },
-            {
-              name: "Road End Table",
-              oldPrice: 510,
-              newPrice: 431,
-              img: "table4.jpg",
-            },
-            {
-              name: "Rectangular Table",
-              oldPrice: 450,
-              newPrice: 389,
-              img: "table5.jpg",
-            },
-            {
-              name: "Emily Flared",
-              oldPrice: 410,
-              newPrice: 389,
-              img: "table6.jpg",
-            },
-            {
-              name: "Chairside End Table",
-              oldPrice: 450,
-              newPrice: 390,
-              img: "table7.jpg",
-            },
-            {
-              name: "Cosy Table",
-              oldPrice: 430,
-              newPrice: 396,
-              img: "table8.jpg",
-            },
-            {
-              name: "Lake House Table",
-              oldPrice: 550,
-              newPrice: 420,
-              img: "table9.jpg",
-            },
-            {
-              name: "Chairside Table",
-              oldPrice: 470,
-              newPrice: 385,
-              img: "table10.jpg",
-            },
-            {
-              name: "Occasional Table",
-              oldPrice: 450,
-              newPrice: 399,
-              img: "table11.jpg",
-            },
-            {
-              name: "Dockside Table",
-              oldPrice: 420,
-              newPrice: 390,
-              img: "table12.jpg",
-            },
-          ];
 
-          tables.forEach((table) => {
-            document.write(`
-              <a data-aos="fade-up" href="#" class="group">
-                  <div class="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="p-4">
-                      <img
-                        class="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                        src="../images/${table.img}"
-                        alt="${table.name}"
-                      />
-                      <div class="absolute top-4 right-4 flex space-x-1 text-yellow-400">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                    </div>
-                    <div class="p-6">
-                      <h2 class="text-2xl font-semibold text-gray-800 text-center mb-4">${table.name}</h2>
-                      <div class="flex justify-center items-center space-x-4">
-                        <p class="text-gray-400 text-xl line-through">$${table.oldPrice}</p>
-                        <p class="text-red-500 text-2xl font-bold">$${table.newPrice}</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              
-            `);
-          });
-        </script>
+    <!-- Main Content -->
+    <section id="faq" class="bg-gradient-to-br from-gray-50 to-gray-100 py-16">
+      <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-start gap-12">
+        <!-- FAQ Section -->
+        <div  class="w-full md:w-1/2 animate-slideIn">
+          <h2 class="text-3xl font-bold text-center mb-12 text-amber-900 relative">
+            Frequently Asked Questions
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-amber-900/20 rounded-full"></span>
+          </h2>
+          
+          <div data-aos="fade-right" class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <div
+              class="border border-black rounded-lg overflow-hidden transition-all duration-200 hover:translate-x-2"
+            >
+              <button
+                class="faq-button w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none"
+                onclick="toggleCollapse('collapse1', this)"
+              >
+                What materials are used to make this furniture, and how durable
+                are they?
+              </button>
+              <div id="collapse1" class="collapse-content">
+                Our furniture is made from high-quality wood like oak, walnut, and
+                engineered wood, designed for durability and long-lasting use.
+              </div>
+            </div>
+  
+            <!-- FAQ Item 2 -->
+            <div
+              class="border border-black rounded-lg overflow-hidden transition-all duration-200 hover:translate-x-2"
+            >
+              <button
+                class="faq-button w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none"
+                onclick="toggleCollapse('collapse2', this)"
+              >
+                What does this furniture require assembly, and if so, is there an
+                instruction manual included?
+              </button>
+              <div id="collapse2" class="collapse-content">
+                Some pieces come pre-assembled, while others require simple
+                assembly. Instructions are included, and video guides are
+                available.
+              </div>
+            </div>
+  
+            <!-- FAQ Item 3 -->
+            <div
+              class="border border-black rounded-lg overflow-hidden transition-all duration-200 hover:translate-x-2"
+            >
+              <button
+                class="faq-button w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none"
+                onclick="toggleCollapse('collapse3', this)"
+              >
+                What is your return policy if the furniture doesn't fit my space
+                or expectations?
+              </button>
+              <div id="collapse3" class="collapse-content">
+                We offer a 30-day return policy for unused items. Return shipping
+                fees may apply. Check our Returns & Refunds page for details.
+              </div>
+            </div>
+  
+            <!-- FAQ Item 4 -->
+            <div
+              class="border border-black rounded-lg overflow-hidden transition-all duration-200 hover:translate-x-2"
+            >
+              <button
+                class="faq-button w-full text-left p-4 bg-white hover:bg-gray-50 focus:outline-none"
+                onclick="toggleCollapse('collapse4', this)"
+              >
+                Do you offer delivery and installation services, and how much do
+                they cost?
+              </button>
+              <div id="collapse4" class="collapse-content">
+                Yes! Standard delivery is free for orders over $500. White-glove
+                delivery (includes setup) is available for an extra fee at
+                checkout.
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Contact Form -->
+        <div class="w-full md:w-1/2 animate-slideIn">
+          <h2 class="text-3xl font-bold text-center mb-12 text-amber-900 relative">
+            Ask Us
+            <span class="absolute bottom-0  left-1/2 transform -translate-x-1/2 w-24 h-1 bg-amber-900/20 rounded-full"></span>
+          </h2>
+          
+          <form data-aos="fade-left" class="bg-gray-300 p-8 rounded-lg shadow-lg">
+            <input
+              type="text"
+              placeholder="Your name"
+              class="w-full py-4 px-6 rounded-lg border-2 border-gray-100 focus:outline-none bg-gray-100 mb-4"
+            />
+            <input
+              type="email"
+              placeholder="Your email"
+              class="w-full py-4 px-6 rounded-lg border-2 border-gray-100 focus:outline-none bg-gray-100 mb-4"
+            />
+            <textarea
+              placeholder="Your message"
+              class="w-full py-4 px-6 rounded-lg border-2 border-gray-100 focus:outline-none bg-gray-100 mb-4 min-h-[8rem]"
+            ></textarea>
+            <div class="flex justify-end">
+              <button
+                type="submit"
+                class="py-4 px-6 bg-amber-900 text-white rounded-lg hover:bg-amber-800 focus:outline-none transition-colors duration-200"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -647,9 +733,16 @@
         </div>
       </div>
     </div>
-    <script src="../scripts/menu.js"></script>
+
+    <!-- JavaScript for Collapse Toggle -->
+    <script src="../scripts/faq.js"></script>
+    <script src="../scripts/menubtn.js"></script>
+    <script src="../scripts/app.js"></script>
+
     <!-- aos -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../scripts/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

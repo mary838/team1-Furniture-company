@@ -17,6 +17,36 @@ document.addEventListener("DOMContentLoaded", function () {
     "Special Offers",
     "Trending Items",
     "Seasonal Collections",
+    "cosy sofa",
+    "sofa",
+    "bed",
+    "dining table",
+    "dining chair",
+    "coffee table",
+    "kitchen table",
+    "kitchen chair",
+    "kitchen cabinet",
+    "kitchen counter",
+    "kitchen drawer",
+    "kitchen shelf",
+    "kitchen rack",
+    "kitchen sink",
+    "kitchen faucet",
+    "kitchen stove",
+    "kitchen toaster",
+    "kitchen microwave",
+    "kitchen fridge",
+    "kitchen dishwasher",
+    "kitchen washing machine",
+    "kitchen iron",
+    "kitchen stove top",
+    "lamp",
+    "floor lamp",
+    "table lamp",
+    "desk lamp",
+    "reading lamp",
+    "nightstand",
+    "armchair",
   ];
 
   // Search Modal Functions
@@ -202,12 +232,4 @@ megaMenu.addEventListener("mouseenter", () => {
 
 megaMenu.addEventListener("mouseleave", () => {
   megaMenu.classList.remove("active");
-});
-
-// Mobile menu toggle
-const menuBtn = document.getElementById("menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
-
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
 });

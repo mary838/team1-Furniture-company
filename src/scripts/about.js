@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -11,18 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const hiddenElements = document.querySelectorAll(".scroll-slide");
   hiddenElements.forEach((el) => observer.observe(el));
-=======
-// const menuBtn = document.getElementById("menu-btn");
-// const mobileMenu = document.getElementById("mobile-menu");
-
-=======
-// const menuBtn = document.getElementById("menu-btn");
-// const mobileMenu = document.getElementById("mobile-menu");
-
->>>>>>> main
-// menuBtn.addEventListener("click", () => {
-//   mobileMenu.classList.toggle("hidden");
-// });
+});
 
 class ProgressBar {
   constructor(element) {
@@ -36,7 +23,6 @@ class ProgressBar {
   }
 
   init() {
-    // Create HTML structure
     this.element.innerHTML = `
       <div class="mb-4">
         <span class="text-black text-lg font-medium">${this.label}</span>
@@ -50,15 +36,16 @@ class ProgressBar {
       </div>
     `;
 
-    // Observe intersection
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            this.element.classList.add("visible");
             setTimeout(() => {
               this.animateProgress();
             }, this.delay);
           } else {
+            this.element.classList.remove("visible");
             this.resetProgress();
           }
         });
@@ -73,10 +60,9 @@ class ProgressBar {
     const progressBar = this.element.querySelector(".bg-amber-800");
     const percentageDisplay = this.element.querySelector(".bg-amber-600");
 
-    // Animate progress bar
     let start = 0;
-    const duration = 1000; // match progress bar duration
-    const step = 16; // for smooth animation (60fps)
+    const duration = 1000;
+    const step = 16;
     const increment = (this.percentage * step) / duration;
 
     const timer = setInterval(() => {
@@ -95,7 +81,7 @@ class ProgressBar {
   }
 
   resetProgress() {
-    const progressBar = this.element.querySelector(".bg-amber-900");
+    const progressBar = this.element.querySelector(".bg-amber-800");
     const percentageDisplay = this.element.querySelector(".bg-amber-600");
 
     this.width = 0;
@@ -105,12 +91,50 @@ class ProgressBar {
   }
 }
 
-// Initialize all progress bars
-document.querySelectorAll(".progress-bar").forEach((element) => {
-  new ProgressBar(element);
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> main
+// Initialize progress bars when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".progress-bar").forEach((element) => {
+    new ProgressBar(element);
+  });
 });
 
+// Number animation
+document.addEventListener("DOMContentLoaded", function () {
+  const numberElements = document.querySelectorAll("[data-target]");
+  const numbersSection = document.getElementById("numbersSection");
+  let hasAnimated = false;
+
+  function animateValue(element, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const currentValue = Math.floor(progress * (end - start) + start);
+      element.textContent = currentValue;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          hasAnimated = true;
+          numberElements.forEach((element) => {
+            const target = parseInt(element.getAttribute("data-target"));
+            animateValue(element, 0, target, 2000);
+          });
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0.5,
+    }
+  );
+
+  observer.observe(numbersSection);
+});

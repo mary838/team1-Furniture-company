@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table</title>
+    <title>UrbanWood Designs</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- fontfamily -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
@@ -15,24 +17,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <!-- aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-    </style>
-    <script src="../scripts/scroll.js"></script>
-    <link rel="stylesheet" href="../styles/product.css" />
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <!-- header -->
     <nav class="z-auto bg-white-600 p-0 bg-gray-200">
       <div
         class="px-6 mx-auto flex justify-between items-center max-w-[98%] w-auto"
       >
-        <a href="/index.html" class="text-white text-2xl font-bold">
+        <a href="./index.html" class="text-white text-2xl font-bold">
           <img src="../assets/logo.png" alt="Logo" class="h-[50px] my-2" />
         </a>
 
@@ -409,129 +401,72 @@
         <!-- Your mobile menu items -->
       </ul>
     </nav>
-    <!-- content section -->
-    <section
-      class="flex items-center justify-center flex-col py-12 px-4 sm:px-6 lg:px-8"
-    >
-      <!-- Heading -->
-      <div class="text-center w-full mb-12">
-        <h1
-          data-aos="fade-down"
-          class="text-4xl sm:text-5xl font-bold text-gray-900"
-        >
-          <span data-aos="fade-down" data-aos-delay="200" class="text-amber-900"
-            >Table collection</span
-          >
-        </h1>
-      </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-12">
-        <script>
-          const tables = [
-            {
-              name: "Occasional Table",
-              oldPrice: 430,
-              newPrice: 310,
-              img: "table1.jpg",
-            },
-            {
-              name: "Chair Side Table",
-              oldPrice: 415,
-              newPrice: 305,
-              img: "table2.jpg",
-            },
-            {
-              name: "Fabric Table",
-              oldPrice: 715,
-              newPrice: 699,
-              img: "table3.jpg",
-            },
-            {
-              name: "Road End Table",
-              oldPrice: 510,
-              newPrice: 431,
-              img: "table4.jpg",
-            },
-            {
-              name: "Rectangular Table",
-              oldPrice: 450,
-              newPrice: 389,
-              img: "table5.jpg",
-            },
-            {
-              name: "Emily Flared",
-              oldPrice: 410,
-              newPrice: 389,
-              img: "table6.jpg",
-            },
-            {
-              name: "Chairside End Table",
-              oldPrice: 450,
-              newPrice: 390,
-              img: "table7.jpg",
-            },
-            {
-              name: "Cosy Table",
-              oldPrice: 430,
-              newPrice: 396,
-              img: "table8.jpg",
-            },
-            {
-              name: "Lake House Table",
-              oldPrice: 550,
-              newPrice: 420,
-              img: "table9.jpg",
-            },
-            {
-              name: "Chairside Table",
-              oldPrice: 470,
-              newPrice: 385,
-              img: "table10.jpg",
-            },
-            {
-              name: "Occasional Table",
-              oldPrice: 450,
-              newPrice: 399,
-              img: "table11.jpg",
-            },
-            {
-              name: "Dockside Table",
-              oldPrice: 420,
-              newPrice: 390,
-              img: "table12.jpg",
-            },
-          ];
 
-          tables.forEach((table) => {
-            document.write(`
-              <a data-aos="fade-up" href="#" class="group">
-                  <div class="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="p-4">
-                      <img
-                        class="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
-                        src="../images/${table.img}"
-                        alt="${table.name}"
-                      />
-                      <div class="absolute top-4 right-4 flex space-x-1 text-yellow-400">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div>
-                    </div>
-                    <div class="p-6">
-                      <h2 class="text-2xl font-semibold text-gray-800 text-center mb-4">${table.name}</h2>
-                      <div class="flex justify-center items-center space-x-4">
-                        <p class="text-gray-400 text-xl line-through">$${table.oldPrice}</p>
-                        <p class="text-red-500 text-2xl font-bold">$${table.newPrice}</p>
-                      </div>
-                    </div>
+    <section class="my-16">
+      <!-- Progress Steps -->
+      <div
+        class="max-w-4xl mx-auto mb-8 flex items-center justify-center gap-4 text-lg font-medium"
+      >
+        <a href="cart.html" class="text-gray-900 hover:text-amber-700"
+          >Shopping Cart</a
+        >
+        <span class="text-gray-400">&rarr;</span>
+        <a href="checkout.html" class="text-gray-900 hover:text-amber-700"
+          >Checkout Detail</a
+        >
+        <span class="text-gray-400">&rarr;</span>
+        <a href="#" class="text-gray-400 hover:text-amber-700"
+          >Order Complete</a
+        >
+      </div>
+
+      <div class="max-w-3xl mx-auto flex flex-col lg:flex-row gap-6">
+        <!-- Cart Items -->
+        <div class="flex-grow space-y-4" id="cartItems">
+          <!-- Cart items will be dynamically populated -->
+        </div>
+
+        <!-- Cart Content -->
+        <div id="cartContent" class="max-w-3xl mx-auto">
+          <div class="flex flex-col lg:flex-row gap-6">
+            <!-- Cart Items -->
+            <div class="flex-grow space-y-4" id="cartItems">
+              <!-- Cart items will be dynamically populated -->
+            </div>
+
+            <!-- Cart Totals -->
+            <div class="w-full lg:w-72">
+              <div class="bg-white rounded-lg p-4 shadow">
+                <h3 class="text-lg font-medium mb-4">Cart totals</h3>
+                <div class="space-y-2 mb-4">
+                  <div class="flex justify-between">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0</span>
                   </div>
+                  <div class="flex justify-between font-medium">
+                    <span>Total</span>
+                    <span id="total">$0</span>
+                  </div>
+                </div>
+                <a href="./checkout.html">
+                  <button
+                    class="w-full bg-amber-700 text-white py-3 rounded-lg mb-2 hover:bg-amber-900"
+                  >
+                    Proceed to checkout
+                  </button>
                 </a>
-              
-            `);
-          });
-        </script>
+                <a href="./product.html">
+                  <button
+                    class="w-full bg-amber-700 text-white py-3 rounded-lg hover:bg-amber-900"
+                    id="continueShoppingBtn"
+                  >
+                    Continue Shopping
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -647,9 +582,7 @@
         </div>
       </div>
     </div>
-    <script src="../scripts/menu.js"></script>
-    <!-- aos -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../scripts/aos.js"></script>
+
+    <script src="../scripts/cart.js"></script>
   </body>
 </html>

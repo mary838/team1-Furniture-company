@@ -3,29 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UrbanWood Designs</title>
-    <!-- Add Font Awesome -->
+    <title>UrbanWood Designs </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- fontfamily -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icon -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <!-- output -->
-    <link rel="stylesheet" href="./src/styles/output.css" />
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Custom animation CSS -->
-    <link rel="stylesheet" href="../styles/animation.css" />
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- appcss -->
-    <link rel="stylesheet" href="../styles/style.css" />
     <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
       .mega-menu-container {
         opacity: 0;
         visibility: hidden;
@@ -56,7 +48,10 @@
 
         <ul class="hidden md:flex space-x-6">
           <li>
-            <a href="./index.html" class="text-amber-900 hover:text-blue-900"
+            <a
+              class="text-amber-900 hover:text-blue-900"
+              href="index.html"
+              class="text-amber-900 hover:text-blue-900"
               >Home</a
             >
           </li>
@@ -68,72 +63,76 @@
             >
           </li>
           <li>
-            <a href="#" class="text-amber-900 hover:text-blue-900">Product</a>
+            <a
+              href="./src/pages/product.html"
+              class="text-amber-900 hover:text-blue-900"
+              >Product</a
+            >
           </li>
           <li>
-            <a href="#" class="text-amber-900 hover:text-blue-900">Pages</a>
+            <a
+              href="./src/pages/page.html"
+              class="text-amber-900 hover:text-blue-900"
+              >Pages</a
+            >
           </li>
           <li class="relative group">
             <button class="text-amber-900 hover:text-blue-900">Category</button>
             <ul
-              class="absolute left-0 mt-2 w-40 bg-white shadow-md rounded-lg hidden group-hover:block"
+              class="z-50 absolute left-0 mt-2 w-40 bg-white shadow-md rounded-lg hidden group-hover:block"
             >
               <li>
-                <a href="#" class="block px-4 py-2 hover:text-blue-900"
+                <a
+                  href="./src/pages/table-g.html"
+                  class="block px-4 py-2 hover:text-blue-900"
                   >Table</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:text-blue-900">Sofa</a>
+                <a
+                  href="./src/pages/sofa-g.html"
+                  class="block px-4 py-2 hover:text-blue-900"
+                  >Sofa</a
+                >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:text-blue-900"
+                <a
+                  href="./src/pages/mirror-g.html"
+                  class="block px-4 py-2 hover:text-blue-900"
                   >Mirror</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:text-blue-900">Lamp</a>
+                <a
+                  href="./src/pages/lamp-g.html"
+                  class="block px-4 py-2 hover:text-blue-900"
+                  >Lamp</a
+                >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:text-blue-900">Bed</a>
+                <a
+                  href="./src/pages/bed-g.html"
+                  class="block px-4 py-2 hover:text-blue-900"
+                  >Bed</a
+                >
               </li>
             </ul>
           </li>
           <li>
-            <a href="#" class="text-ambe gh r-900 hover:text-blue-900">Blog</a>
+            <a
+              href="./src/pages/blog.html"
+              class="text-amber-900 hover:text-blue-900"
+              >Blog</a
+            >
           </li>
-          <li>
-            <a href="#" class="text-amber-900 hover:text-blue-900">Contact</a>
-          </li>
-
-          <!-- icon -->
-          <li>
-            <a href="#" id="search-icon">
-              <i
-                class="fa-solid fa-magnifying-glass text-amber-900 hover:text-blue-900 transition-colors duration-300"
-              ></i>
-            </a>
-          </li>
-          <li>
-            <a href="#" id="userIcon">
-              <i
-                class="fa-regular fa-user text-amber-900 hover:text-blue-900 transition-colors duration-300"
-              ></i>
-            </a>
-          </l>
           <li>
             <a
-              href="#"
-              class="text-amber-900 hover:text-blue-900 transition-colors duration-300"
+              href="./src/pages/contact.html"
+              class="text-amber-900 hover:text-blue-900"
+              >Contact</a
             >
-              <i class="fa-solid fa-cart-shopping"></i>
-            </a>
           </li>
-        </ul>
-
-        <!-- Navigation -->
-
-        <ul class="flex items-center border gap-[1.4em]">
+          <!-- icon -->
           <li>
             <a href="#" id="search-icon">
               <i
@@ -157,7 +156,6 @@
             </a>
           </li>
         </ul>
-
 
         <!-- Search Modal -->
         <div id="searchOverlay" class="fixed inset-0 z-50 hidden">
@@ -423,74 +421,140 @@
           </div>
         </div>
 
+
         <!-- Mobile Menu Button -->
-        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-          ☰
+<button id="menu-btn" class="md:hidden fixed right-4 top-4 z-50 p-2 text-2xl text-amber-900 hover:text-blue-900 focus:outline-none">
+  ☰
+</button>
+
+<!-- Mobile Menu Overlay -->
+<div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed top-0 right-[-100%] w-[300px] h-full bg-white z-50 transition-all duration-300 ease-in-out md:hidden overflow-y-auto">
+  <div class="p-6 space-y-6">
+    <!-- Logo -->
+    <div class="flex justify-center mb-8">
+      <img src="./src/assets/Logo.png" alt="Logo" class="h-[40px]" />
+    </div>
+
+    <!-- Main Navigation -->
+    <ul class="space-y-4">
+      <li>
+        <a href="./index.html" class="block text-amber-900 hover:text-blue-900 py-2">Home</a>
+      </li>
+      <li>
+        <a href="./src/pages/about.html" class="block text-amber-900 hover:text-blue-900 py-2">About</a>
+      </li>
+      <li>
+        <a href="./src/pages/product.html" class="block text-amber-900 hover:text-blue-900 py-2">Product</a>
+      </li>
+      <li>
+        <a href="./src/pages/page.html" class="block text-amber-900 hover:text-blue-900 py-2">Pages</a>
+      </li>
+      
+      <!-- Category Dropdown -->
+      <li class="relative">
+        <button id="mobile-category-btn" class="flex items-center justify-between w-full text-amber-900 hover:text-blue-900 py-2">
+          Category
+          <i class="fa-solid fa-chevron-down text-sm"></i>
         </button>
-      </div>
+        <ul id="mobile-category-dropdown" class="hidden pl-4 space-y-2 mt-2">
+          <li><a href="../pages/table-g.html" class="block text-amber-900 hover:text-blue-900 py-2">Table</a></li>
+          <li><a href="../pages/sofa-g.html" class="block text-amber-900 hover:text-blue-900 py-2">Sofa</a></li>
+          <li><a href="../pages/blog.html" class="block text-amber-900 hover:text-blue-900 py-2">Mirror</a></li>
+          <li><a href="../pages/lamp.html" class="block text-amber-900 hover:text-blue-900 py-2">Lamp</a></li>
+          <li><a href="../pages/bed.html" class="block text-amber-900 hover:text-blue-900 py-2">Bed</a></li>
+        </ul>
+      </li>
+      
+      <li>
+        <a href="./src/pages/blog.html" class="block text-amber-900 hover:text-blue-900 py-2">Blog</a>
+      </li>
+      <li>
+        <a href="./src/pages/contact.html" class="block text-amber-900 hover:text-blue-900 py-2">Contact</a>
+      </li>
+    </ul>
 
-      <!-- Search Bar -->
-      <div
-        id="search-bar"
-        class="hidden w-full bg-gray-200 p-4 transition-all duration-300 ease-in-out"
-      >
-        <div class="relative">
-          <input
-            type="text"
-            id="search-input"
-            placeholder="Search..."
-            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
-          />
-          <!-- Search Suggestions -->
-          <div
-            id="search-suggestions"
-            class="absolute w-full bg-white border border-gray-300 rounded-lg mt-2 hidden"
-          >
-            <!-- Suggestions will be dynamically inserted here -->
-          </div>
-        </div>
-      </div>
-
-      <ul
-        id="mobile-menu"
-        class="hidden md:hidden bg-blue-700 text-white text-center space-y-2 p-4"
-      ></ul>
+    <!-- Icons Section -->
+    <div class="flex justify-center space-x-6 pt-4 border-t">
+      <a href="#" class="text-amber-900 hover:text-blue-900 text-xl">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </a>
+      <a href="#" class="text-amber-900 hover:text-blue-900 text-xl">
+        <i class="fa-regular fa-user"></i>
+      </a>
+      <a href="#" class="text-amber-900 hover:text-blue-900 text-xl">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+    </div>
+  </div>
+</div>
     </nav>
 
-    <section
-      class="relative flex items-center justify-center min-h-screen bg-cover bg-center"
-      style="background-image: url('../images/1.png'); background-size: cover"
+    <!-- Hero Section -->
+<section
+class="relative flex items-center justify-center min-h-screen bg-cover bg-center "
+style="background-image: url('./src/assets/10.svg');"
+>
+<!-- Enhanced gradient overlay for better depth -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60 backdrop-blur-sm"></div>
+
+<!-- Main Content Container -->
+<div class="relative z-10 px-8 py-16 bg-white/5 backdrop-blur-sm border border-white/20 rounded-2xl shadow-2xl max-w-3xl mx-4 transform hover:scale-[1.02] transition-all duration-500">
+  <!-- Decorative elements -->
+  <div class="absolute -top-4 -left-4 w-32 h-32 border-t-2 border-l-2 border-amber-500/30 rounded-tl-3xl"></div>
+  <div class="absolute -bottom-4 -right-4 w-32 h-32 border-b-2 border-r-2 border-amber-500/30 rounded-br-3xl"></div>
+  
+  <!-- Content -->
+  <div class="text-center space-y-8">
+    <h1 
+      data-aos="fade-down" 
+      data-aos-duration="1000"
+      class="text-4xl sm:text-5xl font-medium text-white mb-4 tracking-wide"
     >
-      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      Wide Collection Of Home
+    </h1>
+    
+    <h1
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="1000"
+      class="text-6xl sm:text-8xl font-extrabold text-amber-700 tracking-tight relative inline-block"
+    >
+      Furniture
+      <span class="absolute -bottom-2 left-0 w-full h-1 bg-amber-700 rounded-full transform -skew-x-12"></span>
+    </h1>
+    
+    <p
+      data-aos="fade-up"
+      data-aos-delay="400"
+      data-aos-duration="1000"
+      class="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed"
+    >
+      Embrace a life of luxury and comfort with Xtra. Our exclusive furniture collection 
+      brings sophistication to every corner of your home.
+    </p>
+    
+    
+  </div>
+  
+  <!-- Optional: Floating decorative elements -->
+  <div class="absolute -left-12 top-1/2 w-24 h-24 border-2 border-amber-500/10 rounded-full animate-pulse"></div>
+  <div class="absolute -right-8 bottom-1/4 w-16 h-16 border-2 border-amber-500/10 rounded-full animate-pulse delay-300"></div>
+</div>
 
-      <div
-        class="relative p-12 bg-white/10 border border-white/30 rounded-lg shadow-lg max-w-2xl mx-auto text-center"
-      >
-        <h1
-          data-aos="fade-down"
-          class="text-5xl font-medium text-white mb-4 absolute"
-        >
-          Wide Collection Of Home
-        </h1>
-        <h1
-          data-aos="fade-up"
-          data-aos-delay="200"
-          class="text-8xl font-extrabold text-amber-700 mb-6"
-        >
-          Furniture
-        </h1>
-        <p
-          data-aos="fade-up"
-          data-aos-delay="400"
-          class="mt-6 text-xl text-white"
-        >
-          Embrace a life of luxury and comfort with Xtra. Our exclusive
-          furniture collection brings sophistication.
-        </p>
-      </div>
-    </section>
+<!-- Optional: Scroll indicator -->
+<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+  <svg class="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+  </svg>
+</div>
+</section>
 
+    <!-- Furniture Range -->
     <section class="container mx-auto px-4 py-12">
+      <!-- Heading -->
       <h1
         data-aos="fade-right"
         class="text-4xl font-medium text-start text-black mb-8"
@@ -505,97 +569,108 @@
         Furniture Range
       </h2>
 
+      <!-- Grid for Furniture Items -->
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <!-- Sofa -->
         <div
           data-aos="fade-up"
-          class="w-[240px] h-[290px] bg-white p-4 rounded-xl shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
+          class="bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
         >
           <a href="">
             <img
-              class="w-[190px] h-[200px] mx-auto mb-2 bg-white rounded-xl hover:bg-gray-400"
+              class="w-12 h-12 mx-auto mb-2"
               src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2024/03/icon1.png"
               alt="Sofa"
             />
             <h3
-              class="text-2xl font-semibold text-gray-800 group-hover:text-white mt-[1em]"
+              class="text-lg font-semibold text-gray-800 group-hover:text-white"
             >
               Sofa
             </h3>
           </a>
         </div>
+
+        <!-- Table -->
         <div
           data-aos="fade-up"
           data-aos-delay="200"
-          class="w-[240px] h-[290px] bg-white p-4 rounded-xl shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
+          class="bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
         >
           <a href="">
             <img
-              class="w-[190px] h-[200px] mx-auto mb-2 bg-white rounded-xl hover:bg-gray-400"
+              class="w-12 h-12 mx-auto mb-2"
               src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2024/03/icon2.png"
               alt="Table"
             />
             <h3
-              class="font-semibold text-gray-800 group-hover:text-white mt-[1em] text-2xl"
+              class="text-lg font-semibold text-gray-800 group-hover:text-white"
             >
               Table
             </h3>
           </a>
         </div>
+
+        <!-- Bed -->
         <div
           data-aos="fade-up"
           data-aos-delay="300"
-          class="w-[240px] h-[290px] rounded-xl bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
+          class="bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
         >
           <a href="">
             <img
-              class="w-[190px] h-[200px] mx-auto mb-2 bg-white rounded-xl hover:bg-gray-400"
+              class="w-12 h-12 mx-auto mb-2"
               src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2024/03/icon3.png"
               alt="Bed"
             />
             <h3
-              class="text-2xl font-semibold text-gray-800 group-hover:text-white mt-[1em]"
+              class="text-lg font-semibold text-gray-800 group-hover:text-white"
             >
               Bed
             </h3>
           </a>
         </div>
+
+        <!-- Wardrobe -->
         <div
           data-aos="fade-up"
           data-aos-delay="400"
-          class="w-[240px] h-[290px] rounded-xl bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
+          class="bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
         >
           <a href="">
             <img
-              class="w-[190px] h-[200px] bg-white rounded-xl mx-auto mb-2 hover:bg-gray-400"
+              class="w-12 h-12 mx-auto mb-2"
               src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2024/03/icon4.png"
               alt="Wardrobe"
             />
             <h3
-              class="font-semibold text-gray-800 group-hover:text-white mt-[1em] text-2xl"
+              class="text-lg font-semibold text-gray-800 group-hover:text-white"
             >
               Wardrobe
             </h3>
           </a>
         </div>
+
+        <!-- Mirror -->
         <div
           data-aos="fade-up"
           data-aos-delay="500"
-          class="w-[240px] h-[290px] rounded-xl bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
+          class="bg-white p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:bg-amber-800 hover:-translate-y-1 group"
         >
           <a href="">
             <img
-              class="w-[190px] h-[200px] bg-white rounded-xl mx-auto mb-2 hover:bg-gray-400"
+              class="w-12 h-12 mx-auto mb-2"
               src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2024/03/icon5.png"
               alt="Mirror"
             />
             <h3
-              class="font-semibold text-gray-800 group-hover:text-white mt-[1em] text-2xl"
+              class="text-lg font-semibold text-gray-800 group-hover:text-white"
             >
               Mirror
             </h3>
           </a>
         </div>
 
+        <!-- Bathtub -->
         <div
           data-aos="fade-up"
           data-aos-delay="200"
@@ -603,18 +678,19 @@
         >
           <a href="">
             <img
-              class="w-[190px] h-[200px] bg-white rounded-xl mx-auto mb-2 hover:bg-gray-400"
+              class="w-12 h-12 mx-auto mb-2"
               src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2024/03/icon10.png"
               alt="Bathtub"
             />
             <h3
-              class="font-semibold text-gray-800 group-hover:text-white mt-[1em] text-2xl"
+              class="text-lg font-semibold text-gray-800 group-hover:text-white"
             >
               Bathtub
             </h3>
           </a>
         </div>
 
+        <!-- Sofa Set -->
         <div
           data-aos="fade-up"
           data-aos-delay="300"
@@ -622,18 +698,19 @@
         >
           <a href="">
             <img
-              class="w-[190px] h-[200px] bg-white rounded-xl mx-auto mb-2 hover:bg-gray-400"
+              class="w-12 h-12 mx-auto mb-2"
               src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2024/03/icon9.png"
               alt="Sofa Set"
             />
             <h3
-              class="font-semibold text-gray-800 group-hover:text-white mt-[1em] text-2xl"
+              class="text-lg font-semibold text-gray-800 group-hover:text-white"
             >
               Sofa Set
             </h3>
           </a>
         </div>
 
+        <!-- Sink -->
         <div
           data-aos="fade-up"
           data-aos-delay="400"
@@ -641,17 +718,19 @@
         >
           <a href="">
             <img
-              class="w-[190px] h-[200px] bg-white rounded-xl mx-auto mb-2 hover:bg-gray-400"
+              class="w-12 h-12 mx-auto mb-2"
               src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2024/03/icon8.png"
               alt="Sink"
             />
             <h3
-              class="font-semibold text-gray-800 group-hover:text-white mt-[1em] text-2xl"
+              class="text-lg font-semibold text-gray-800 group-hover:text-white"
             >
               Sink
             </h3>
           </a>
         </div>
+
+        <!-- Lamp -->
         <div
           data-aos="fade-up"
           data-aos-delay="500"
@@ -659,18 +738,19 @@
         >
           <a href="">
             <img
-              class="w-[190px] h-[200px] bg-white rounded-xl mx-auto mb-2 hover:bg-gray-400"
+              class="w-12 h-12 mx-auto mb-2"
               src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2024/03/icon7.png"
               alt="Lamp"
             />
             <h3
-              class="font-semibold text-gray-800 group-hover:text-white mt-[1em] text-2xl"
+              class="text-lg font-semibold text-gray-800 group-hover:text-white"
             >
               Lamp
             </h3>
           </a>
         </div>
 
+        <!-- Other... -->
         <div
           data-aos="fade-up"
           data-aos-delay="700"
@@ -678,12 +758,12 @@
         >
           <a href="">
             <img
-              class="w-[190px] h-[200px] bg-white rounded-xl mx-auto mb-2 hover:bg-gray-400"
+              class="w-12 h-12 mx-auto mb-2"
               src="https://xtratheme.com/elementor/furniture-shop-2/wp-content/uploads/sites/112/2024/03/icon6.png"
               alt="Other"
             />
             <h3
-              class="font-semibold text-gray-800 group-hover:text-white mt-[1em] text-2xl"
+              class="text-lg font-semibold text-gray-800 group-hover:text-white"
             >
               Other...
             </h3>
@@ -849,7 +929,7 @@
           <a
             data-aos="fade-right"
             data-aos-delay="600"
-            href="#"
+            href="./src/pages/product.html"
             class="inline-block px-6 py-3 bg-amber-900 text-white rounded-lg hover:bg-amber-800 text-sm sm:text-base transition-all duration-300"
             >Shop Now</a
           >
@@ -1001,6 +1081,7 @@
       </div>
     </section>
 
+    <!-- footer -->
     <div
       class="min-h-[10vh] flex flex-col border border-t-2 border-t-amber-600"
     >
@@ -1056,7 +1137,7 @@
               <input
                 type="email"
                 placeholder="Email..."
-                class="flex-grow p-2 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                class="flex-grow p-2 border border-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 placeholder-gray-500 placeholder-font-extrabold"
               />
               <button
                 class="border border-amber-700 text-white p-2 px-4 hover:bg-amber-800 transition-colors"
@@ -1119,6 +1200,6 @@
 
     <!-- app.js -->
     <script src="./src/scripts/app.js"></script>
-    <script src="../team1-Furniture-company/src/scripts/"></script>
+    <script src="./src/scripts/menubtn.js"></script>
   </body>
 </html>
