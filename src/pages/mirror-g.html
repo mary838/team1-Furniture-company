@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mirror</title>
+    <title>mirror</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- fontfamily -->
     <link
@@ -16,7 +16,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <!-- aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
 
     <style>
       body {
@@ -29,15 +31,13 @@
   <body>
     <nav class="z-auto bg-white-600 p-0">
       <div class="px-6 mx-auto flex justify-between items-center bg-gray-200">
-        <a href="#" class="text-white text-2xl font-bold"
-          ><img src="../assets/Logo.png" alt="Logo" class="h-[50px] my-2"
+        <a href="/index.html" class="text-white text-2xl font-bold"
+          ><img src="../assets/logo.png" alt="Logo" class="h-[50px]"
         /></a>
 
         <ul class="hidden md:flex space-x-6">
           <li>
-            <a
-              href="/team1-Furniture-company/index.html"
-              class="text-amber-900 hover:text-blue-900"
+            <a href="/index.html" class="text-amber-900 hover:text-blue-900"
               >Home</a
             >
           </li>
@@ -57,9 +57,8 @@
             >
           </li>
           <li class="relative group">
-            <button id="dropdownButton" class="text-amber-900">Category</button>
+            <button class="text-amber-900 hover:text-blue-900">Category</button>
             <ul
-              id="dropdownMenu"
               class="z-50 absolute left-0 mt-2 w-40 bg-white shadow-md rounded-lg hidden group-hover:block"
             >
               <li>
@@ -77,7 +76,7 @@
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:text-blue-900"
+                <a href="blog.html" class="block px-4 py-2 hover:text-blue-900"
                   >Mirror</a
                 >
               </li>
@@ -104,115 +103,409 @@
             >
           </li>
 
+          <!-- icon -->
           <li>
-            <a href="#"
-              ><i
-                class="fa-solid fa-magnifying-glass text-amber-900 hover:text-blue-900"
+            <a href="#" id="search-icon">
+              <i
+                class="fa-solid fa-magnifying-glass text-amber-900 hover:text-blue-900 transition-colors duration-300"
               ></i>
             </a>
           </li>
-          <li>
-            <a href="#"
-              ><i
-                class="fa-regular fa-user text-amber-900 hover:text-blue-900"
+          <l>
+            <a href="#" id="userIcon">
+              <i
+                class="fa-regular fa-user text-amber-900 hover:text-blue-900 transition-colors duration-300"
               ></i>
             </a>
-          </li>
+          </l>
           <li>
-            <a href="#" class="text-amber-900">
+            <a
+              href="#"
+              class="text-amber-900 hover:text-blue-900 transition-colors duration-300"
+            >
               <i class="fa-solid fa-cart-shopping"></i>
             </a>
           </li>
         </ul>
 
-        <!-- Mobile Menu Button -->
-        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-          ☰
-        </button>
-      </div>
-      <!-- Mobile Menu -->
-      <ul
-        id="mobile-menu"
-        class="hidden md:hidden bg-blue-700 text-white text-center space-y-2 p-4"
-      >
-        <li>
-          <a href="/team1-Furniture-company/index.html" class="block py-2"
-            >Home</a
+        <!-- Search Modal -->
+        <div id="searchOverlay" class="fixed inset-0 z-50 hidden">
+          <div
+            class="absolute inset-0 bg-black transition-opacity duration-300 opacity-0"
+            id="searchBackdrop"
+          ></div>
+          <div
+            class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl px-4"
           >
-        </li>
-        <li><a href="about.html" class="block py-2">About</a></li>
-        <li><a href="product.html" class="block py-2">Product</a></li>
-        <li><a href="pages.html" class="block py-2">Pages</a></li>
-        <li class="relative group">
-          <button id="dropdownButton">Category</button>
-          <ul
-            id="dropdownMenu"
-            class="absolute left-0 mt-2 w-40 bg-white shadow-md rounded-lg hidden group-hover:block"
-          >
-            <li>
-              <a
-                href="table-g.html"
-                class="block px-4 py-2 hover:text-blue-900 text-black"
-                >Table</a
+            <div
+              class="bg-white rounded-lg shadow-2xl p-6 relative transition-all duration-300 transform opacity-0 scale-95"
+              id="searchContainer"
+            >
+              <button
+                id="closeSearch"
+                class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100"
               >
-            </li>
-            <li>
-              <a
-                href="sofa-g.html"
-                class="block px-4 py-2 hover:text-blue-900 text-black"
-                >Sofa</a
+                ×
+              </button>
+              <div class="relative">
+                <input
+                  type="text"
+                  id="searchInput"
+                  class="w-full px-4 py-3 text-gray-700 bg-gray-50 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"
+                  placeholder="Search..."
+                />
+              </div>
+              <div
+                id="searchSuggestions"
+                class="hidden mt-4 bg-white rounded-lg shadow-lg max-h-64 overflow-y-auto"
               >
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:text-blue-900 text-black"
-                >Mirror</a
-              >
-            </li>
-            <li>
-              <a
-                href="lamp.html"
-                class="block px-4 py-2 hover:text-blue-900 text-black"
-                >Lamp</a
-              >
-            </li>
-            <li>
-              <a
-                href="bed.html"
-                class="block px-4 py-2 hover:text-blue-900 text-black"
-                >Bed</a
-              >
-            </li>
-          </ul>
-        </li>
+                <!-- Suggestions will be populated here -->
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <li></li>
-        <li><a href="blog.html" class="block py-2">Blog</a></li>
-        <li><a href="contact.html" class="block py-2">Contact</a></li>
-      </ul>
+        <!-- Auth Modal -->
+        <div id="authModal" class="fixed inset-0 z-50 hidden">
+          <div
+            class="absolute inset-0 bg-black transition-opacity duration-300 opacity-0"
+            id="authBackdrop"
+          ></div>
+          <div
+            class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-sm transition-all duration-300 opacity-0 scale-95"
+            id="authContainer"
+          >
+            <div class="bg-white p-4 rounded-lg shadow-xl w-full">
+              <div class="text-center mb-4">
+                <h1 class="text-[1.6rem] font-bold text-gray-800">
+                  Welcome Back
+                </h1>
+                <p class="text-[1rem] text-gray-500 mt-1">
+                  Please enter your details
+                </p>
+              </div>
+
+              <div class="flex justify-center space-x-6 mb-4">
+                <button
+                  id="loginBtn"
+                  class="text-active font-semibold text-amber-700 border-b-2 border-amber-700 pb-1 transition-all duration-300 hover:text-amber-600"
+                >
+                  Login
+                </button>
+                <button
+                  id="signupBtn"
+                  class="text-active font-semibold text-amber-700 pb-1 transition-all duration-300 hover:text-amber-600"
+                >
+                  Register
+                </button>
+              </div>
+
+              <div
+                class="relative h-auto transition-all duration-500 ease-in-out overflow-hidden"
+              >
+                <!-- Login Form -->
+                <div
+                  id="loginForm"
+                  class="w-full transition-transform duration-500 ease-in-out transform translate-x-0 opacity-100"
+                >
+                  <form class="space-y-4">
+                    <div>
+                      <label
+                        for="loginEmail"
+                        class="block text-sm font-medium text-gray-700"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        id="loginEmail"
+                        class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                        required
+                        placeholder="Enter your email"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="loginPassword"
+                        class="block text-sm font-medium text-gray-700"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        id="loginPassword"
+                        class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                        required
+                        placeholder="Enter your password"
+                      />
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                      <label class="flex items-center">
+                        <input
+                          type="checkbox"
+                          class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span class="ml-2 text-sm text-gray-600"
+                          >Remember me</span
+                        >
+                      </label>
+                      <a
+                        href="#"
+                        class="text-sm text-blue-600 hover:text-blue-800 transition-colors duration-300 underline underline-offset-4"
+                        >Forgot password?</a
+                      >
+                    </div>
+                    <button
+                      type="submit"
+                      class="w-full bg-amber-700 text-white py-2 rounded-lg font-semibold hover:bg-amber-800 transition"
+                    >
+                      Login
+                    </button>
+                  </form>
+                </div>
+
+                <!-- Signup Form -->
+                <div
+                  id="signupForm"
+                  class="absolute w-full transition-transform duration-500 ease-in-out transform translate-x-full opacity-0"
+                >
+                  <form class="space-y-4">
+                    <div>
+                      <label
+                        for="signupName"
+                        class="block text-sm font-medium text-gray-700"
+                        >Full Name</label
+                      >
+                      <input
+                        type="text"
+                        id="signupName"
+                        class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                        required
+                        placeholder="Enter your full name"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="signupEmail"
+                        class="block text-sm font-medium text-gray-700"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        id="signupEmail"
+                        class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                        required
+                        placeholder="Enter your email"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="signupPassword"
+                        class="block text-sm font-medium text-gray-700"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        id="signupPassword"
+                        class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                        required
+                        placeholder="Create a password"
+                      />
+                    </div>
+                    <div class="flex items-center mb-2">
+                      <input
+                        type="checkbox"
+                        class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                      />
+                      <span class="ml-2 text-sm text-gray-600"
+                        >I agree to the Terms and Privacy Policy</span
+                      >
+                    </div>
+                    <button
+                      type="submit"
+                      class="w-full bg-amber-700 text-white py-2 rounded-lg font-semibold hover:bg-amber-800 transition"
+                    >
+                      Create Account
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="mt-4 text-center">
+                <p class="text-sm text-gray-500 mb-3">Or continue with</p>
+                <div class="flex justify-center space-x-4">
+                  <button
+                    class="p-2 border rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                        fill="#4285F4"
+                      />
+                      <path
+                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                        fill="#34A853"
+                      />
+                      <path
+                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                        fill="#FBBC05"
+                      />
+                      <path
+                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                        fill="#EA4335"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="p-2 border rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="p-2 border rounded-lg hover:bg-gray-50 transition-colors duration-300"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+<button id="menu-btn" class="md:hidden fixed right-4 top-4 z-50 p-2 text-2xl text-amber-900 hover:text-blue-900 focus:outline-none">
+  ☰
+  </button>
+  
+  <!-- Mobile Menu Overlay -->
+  <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-0 right-[-100%] w-[300px] h-full bg-white z-50 transition-all duration-300 ease-in-out md:hidden overflow-y-auto">
+  <div class="p-6 space-y-6">
+    <!-- Logo -->
+    <div class="flex justify-center mb-8">
+      <img src="../assets/logo.png" alt="Logo" class="h-[40px]" />
+    </div>
+  
+    <!-- Main Navigation -->
+    <ul class="space-y-4">
+      <li>
+        <a href="/index.html" class="block text-amber-900 hover:text-blue-900 py-2">Home</a>
+      </li>
+      <li>
+        <a href="about.html" class="block text-amber-900 hover:text-blue-900 py-2">About</a>
+      </li>
+      <li>
+        <a href="product.html" class="block text-amber-900 hover:text-blue-900 py-2">Product</a>
+      </li>
+      <li>
+        <a href="page.html" class="block text-amber-900 hover:text-blue-900 py-2">Pages</a>
+      </li>
+      
+      <!-- Category Dropdown -->
+      <li class="relative">
+        <button id="mobile-category-btn" class="flex items-center justify-between w-full text-amber-900 hover:text-blue-900 py-2">
+          Category
+          <i class="fa-solid fa-chevron-down text-sm"></i>
+        </button>
+        <ul id="mobile-category-dropdown" class="hidden pl-4 space-y-2 mt-2">
+          <li><a href="../pages/table-g.html" class="block text-amber-900 hover:text-blue-900 py-2">Table</a></li>
+          <li><a href="../pages/sofa-g.html" class="block text-amber-900 hover:text-blue-900 py-2">Sofa</a></li>
+          <li><a href="../pages/blog.html" class="block text-amber-900 hover:text-blue-900 py-2">Mirror</a></li>
+          <li><a href="../pages/lamp.html" class="block text-amber-900 hover:text-blue-900 py-2">Lamp</a></li>
+          <li><a href="../pages/bed.html" class="block text-amber-900 hover:text-blue-900 py-2">Bed</a></li>
+        </ul>
+      </li>
+      
+      <li>
+        <a href="blog.html" class="block text-amber-900 hover:text-blue-900 py-2">Blog</a>
+      </li>
+      <li>
+        <a href="contact.html" class="block text-amber-900 hover:text-blue-900 py-2">Contact</a>
+      </li>
+    </ul>
+  
+    <!-- Icons Section -->
+    <div class="flex justify-center space-x-6 pt-4 border-t">
+      <a href="#" class="text-amber-900 hover:text-blue-900 text-xl">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </a>
+      <a href="#" class="text-amber-900 hover:text-blue-900 text-xl">
+        <i class="fa-regular fa-user"></i>
+      </a>
+      <a href="#" class="text-amber-900 hover:text-blue-900 text-xl">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+    </div>
+  </div>
     </nav>
 
-    <!-- product section -->
-    <section class="flex items-center justify-center flex-col">
-      <div class="text-start w-full">
-        <h1
-          class="text-5xl mt-8 font-bold hover:text-amber-200 text-amber-900 ms-6"
-        >
-          Mirror
-        </h1>
-        <p class="mt-4 ms-6">Here product all of Mirror</p>
-      </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <a href="payment.html">
-          <div
-            class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
-          >
-            <div class="p-2">
-              <img
-                class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-                src="../images/m1.jpg"
-                alt="Card Image"
-              />
-              <div class="flex-2 right-10 top-[40px] absolute text-amber-900">
+<!-- Mirror Collection Section -->
+<section class="flex items-center justify-center flex-col py-12 px-4 sm:px-6 lg:px-8">
+  <!-- Heading -->
+  <div class="text-center w-full mb-12">
+    <h1 data-aos="fade-down" class="text-4xl sm:text-5xl font-bold text-gray-900">
+      <span data-aos="fade-down" data-aos-delay="200" class="text-amber-900">
+        Mirror Collection
+      </span>
+    </h1>
+  </div>
+
+  <div id="mirror-grid" class="grid sm:grid-cols-2 md:grid-cols-3 gap-12">
+    <!-- Products will be inserted here -->
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    AOS.init();
+
+    const mirrors = [
+      { name: "Classic Wall Mirror", oldPrice: 120, newPrice: 95, img: "m-1.jpg" },
+      { name: "Vintage Gold Mirror", oldPrice: 180, newPrice: 145, img: "m-2.jpg" },
+      { name: "Minimalist Round Mirror", oldPrice: 150, newPrice: 125, img: "m-3.jpg" },
+      { name: "Ornate Frame Mirror", oldPrice: 200, newPrice: 175, img: "m-4.jpg" },
+      { name: "Rustic Wooden Mirror", oldPrice: 160, newPrice: 135, img: "m-5.jpg" },
+      { name: "Modern LED Mirror", oldPrice: 220, newPrice: 190, img: "m-6.jpg" },
+      { name: "Art Deco Mirror", oldPrice: 250, newPrice: 210, img: "m-7.jpg" },
+      { name: "Frameless Mirror", oldPrice: 140, newPrice: 115, img: "m-8.jpg" },
+      { name: "Oval Vanity Mirror", oldPrice: 175, newPrice: 140, img: "m-9.jpg" },
+      { name: "Antique Silver Mirror", oldPrice: 230, newPrice: 195, img: "m-10.jpg" },
+      { name: "Geometric Wall Mirror", oldPrice: 190, newPrice: 160, img: "m-11.jpg" },
+      { name: "Elegant Dressing Mirror", oldPrice: 260, newPrice: 220, img: "m-12.jpg" },
+    ];
+
+    const gridContainer = document.getElementById("mirror-grid");
+
+    mirrors.forEach((mirror) => {
+      gridContainer.innerHTML += `
+        <a data-aos="fade-up" href="#" class="group">
+          <div class="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="p-4">
+              <img class="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                   src="../images/${mirror.img}" alt="${mirror.name}" />
+              <div class="absolute top-4 right-4 flex space-x-1 text-yellow-400">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -220,382 +513,24 @@
                 <i class="fa-solid fa-star"></i>
               </div>
             </div>
-            <div class="py-4">
-              <h2 class="text-3xl text-gray-800 text-center">Modern Lamp</h2>
-              <div class="flex">
-                <p
-                  class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-                >
-                  $ 230
-                </p>
-                <p class="text-red-500 p-4 flex-2 text-3xl">$ 210</p>
+            <div class="p-6">
+              <h2 class="text-2xl font-semibold text-gray-800 text-center mb-4">${mirror.name}</h2>
+              <div class="flex justify-center items-center space-x-4">
+                <p class="text-gray-400 text-xl line-through">$${mirror.oldPrice}</p>
+                <p class="text-red-500 text-2xl font-bold">$${mirror.newPrice}</p>
               </div>
             </div>
           </div>
         </a>
-        <a href="payment.html">
-          <div
-            class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
-          >
-            <div class="p-2">
-              <img
-                class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-                src="../images/m-2.jpg"
-                alt="Card Image"
-              />
-              <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
+      `;
+    });
+  });
+</script>
 
-            <div class="py-4">
-              <h2 class="text-3xl text-gray-800 text-center">Lamp</h2>
-              <div class="flex">
-                <p
-                  class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-                >
-                  $ 415
-                </p>
-                <p class="text-red-500 p-4 flex-2 text-3xl">$ 305</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="payment.html">
-          <div
-            class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
-          >
-            <div class="p-2">
-              <img
-                class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-                src="../images/m-3.jpg"
-                alt="Card Image"
-              />
-              <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
-
-            <div class="py-4">
-              <h2 class="text-3xl text-gray-800 text-center">Best Modern</h2>
-
-              <div class="flex">
-                <p
-                  class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-                >
-                  $ 210
-                </p>
-                <p class="text-red-500 p-4 flex-2 text-3xl">$ 205</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="payment.html">
-          <div
-            class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
-          >
-            <div class="p-2">
-              <img
-                class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-                src="../images/m-4.jpg"
-                alt="Card Image"
-              />
-              <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
-
-            <div class="py-4">
-              <h2 class="text-3xl text-gray-800 text-center">Dest Lamp</h2>
-              <div class="flex">
-                <p
-                  class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-                >
-                  $ 150
-                </p>
-                <p class="text-red-500 p-4 flex-2 text-3xl">$ 129</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="payment.html">
-          <div
-            class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
-          >
-            <div class="p-2">
-              <img
-                class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-                src="../images/m-5.jpg"
-                alt="Card Image"
-              />
-              <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
-
-            <div class="py-4">
-              <h2 class="text-3xl text-gray-800 text-center">Bedside Lamp</h2>
-              <div class="flex">
-                <p
-                  class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-                >
-                  $ 50
-                </p>
-                <p class="text-red-500 p-4 flex-2 text-3xl">$ 40</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="payment.html">
-          <div
-            class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
-          >
-            <div class="p-2">
-              <img
-                class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-                src="../images/m-6.jpg"
-                alt="Card Image"
-              />
-              <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
-
-            <div class="py-4">
-              <h2 class="text-3xl text-gray-800 text-center">Table Lamp</h2>
-              <div class="flex">
-                <p
-                  class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-                >
-                  $ 230
-                </p>
-                <p class="text-red-500 p-4 flex-2 text-3xl">$ 216</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="payment.html">
-          <div
-            class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
-          >
-            <div class="p-2">
-              <img
-                class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-                src="../images/m-7.jpg"
-                alt="Card Image"
-              />
-              <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
-
-            <div class="py-4">
-              <h2 class="text-3xl text-gray-800 text-center">Lighting</h2>
-              <div class="flex">
-                <p
-                  class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-                >
-                  $ 150
-                </p>
-                <p class="text-red-500 p-4 flex-2 text-3xl">$ 120</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="payment.html">
-          <div
-            class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
-          >
-            <div class="p-2">
-              <img
-                class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-                src="../images/m-8.jpg"
-                alt="Card Image"
-              />
-              <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
-
-            <div class="py-4">
-              <h2 class="text-3xl text-gray-800 text-center">Modern Lamp</h2>
-              <div class="flex">
-                <p
-                  class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-                >
-                  $ 480
-                </p>
-                <p class="text-red-500 p-4 flex-2 text-3xl">$ 435</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="payment.html">
-          <div
-            class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
-          >
-            <div class="p-2">
-              <img
-                class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-                src="../images/m-9.jpg"
-                alt="Card Image"
-              />
-              <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
-
-            <div class="py-4">
-              <h2 class="text-3xl text-gray-800 text-center">Modern Lamp</h2>
-              <div class="flex">
-                <p
-                  class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-                >
-                  $ 564
-                </p>
-                <p class="text-red-500 p-4 flex-2 text-3xl">$ 522</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="payment.html">
-          <div
-            class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
-          >
-            <div class="p-2">
-              <img
-                class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-                src="../images/m-10.jpg"
-                alt="Card Image"
-              />
-              <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
-
-            <div class="py-4">
-              <h2 class="text-3xl text-gray-800 text-center">
-                Ashley Darlita Lamp
-              </h2>
-              <div class="flex">
-                <p
-                  class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-                >
-                  $ 528
-                </p>
-                <p class="text-red-500 p-4 flex-2 text-3xl">$ 369</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="payment.html">
-          <div
-            class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
-          >
-            <div class="p-2">
-              <img
-                class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-                src="../images/m-11.jpg"
-                alt="Card Image"
-              />
-              <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
-
-            <div class="py-4">
-              <h2 class="text-3xl text-gray-800 text-center">
-                Glass Table Lamp
-              </h2>
-              <div class="flex">
-                <p
-                  class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-                >
-                  $ 490
-                </p>
-                <p class="text-red-500 p-4 flex-2 text-3xl">$ 389</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="payment.html">
-          <div
-            class="scroll-slide relative max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-6 mt-6 ms-6 hover:bg-gray-300"
-          >
-            <div class="p-2">
-              <img
-                class="w-full rounded-xl h-64 hover:brightness-75 transition duration-300"
-                src="../images/m-12.jpg"
-                alt="Card Image"
-              />
-              <div class="absolute flex-2 right-10 top-[40px] text-amber-900">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-            </div>
-
-            <div class="py-4">
-              <h2 class="text-3xl text-gray-800 text-center">Macawi Lamp</h2>
-              <div class="flex">
-                <p
-                  class="text-blue-500 p-4 flex-1 text-decoration: line-through text-3xl"
-                >
-                  $ 420
-                </p>
-                <p class="text-red-500 p-4 flex-2 text-3xl">$ 376</p>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </section>
 
     <!-- footer -->
     <div
-      class="min-h-[10vh] flex flex-col border border-t-2 border-t-amber-600 mt-16"
+      class="min-h-[10vh] flex flex-col border border-t-2 border-t-amber-600"
     >
       <div class="flex-grow bg-gradient-to-br from-gray-50 to-gray-200 p-8">
         <div
@@ -705,6 +640,9 @@
         </div>
       </div>
     </div>
-    <script src="../scripts/menu.js"></script>
+
+    <script src="../scripts/app.js"></script>
+    <script src="../scripts/menubtn.js"></script>
+    <script src="../scripts/aos.js"></script>
   </body>
 </html>
